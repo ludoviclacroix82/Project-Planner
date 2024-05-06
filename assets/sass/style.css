@@ -366,28 +366,6 @@ template {
 }
 
 .header-container {
-  height: 10vh;
-  background-color: #e1f4ff;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo-nom, .mode-menu {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.logo, .nom, .mode, .menu {
-  padding: 0 2vw;
-}
-
-.nom {
-  font-family: Righteous;
-  font-size: 0.5em;
-  color: #456375;
-  margin: 0;
+  height: 50vh;
+  background-color: aqua;
 }/*# sourceMappingURL=style.css.map */
