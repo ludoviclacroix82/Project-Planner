@@ -1,1 +1,24 @@
-@use "extends/_extends_dir";
+footer {
+    @include box(100%,5vh);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3%;
+    padding-right: 3%;
+    color:$colorFooterText;
+    background-color:$colorFooterBackground;
+
+    section {
+        display:flex;
+
+        img {
+            width:20px;
+        }
+    }
+
+    p {
+        font-size: 2vw;
+    }
+}
+
+
