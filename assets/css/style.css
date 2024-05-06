@@ -423,7 +423,11 @@ main {
     grid-template-columns: repeat(3, 1fr);
     gap: 5%;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    overflow: hidden; }
+    @media only screen and (min-width: 400px) {
+      main section {
+        justify-content: flex-start; } }
     main section .todo, main section .doing, main section .done {
       position: relative;
       width: 325px;
