@@ -357,6 +357,24 @@ template {
     filter: blur(0);
   }
 }
+html[data-theme=light] {
+  --colorHeaderBackground:#e1f4ff;
+  --colorHeaderText:#456375;
+  --colorMainBackground:linear-gradient(0deg, rgb(44, 159, 223) 0%, rgb(198, 234, 255) 100%);
+  --colorMainText:#456375;
+  --colorFooterBackground:#e1f4ff;
+  --colorFooterText:#456375;
+}
+
+html[data-theme=dark] {
+  --colorHeaderBackground:#456375;
+  --colorHeaderText:#e1f4ff;
+  --colorMainBackground:linear-gradient(0deg, rgb(12, 44, 61) 0%, rgb(59, 71, 78) 100%);
+  --colorMainText:#e1f4ff;
+  --colorFooterBackground:#456375;
+  --colorFooterText:#e1f4ff;
+}
+
 .svgLightMode {
   filter: invert(34%) sepia(38%) saturate(376%) hue-rotate(159deg) brightness(97%) contrast(92%);
 }
@@ -367,21 +385,28 @@ template {
 
 footer {
   width: 100%;
-  height: 5vh;
+  height: 10vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-left: 3%;
   padding-right: 3%;
-  color: #456375;
-  background-color: #e1f4ff;
+  color: var(--colorFooterText);
+  background-color: var(--colorFooterBackground);
 }
 footer section {
+  width: 25%;
   display: flex;
+  justify-content: space-around;
 }
 footer section img {
   width: 20px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+footer section img:hover {
+  transform: scale(110%);
 }
 footer p {
-  font-size: 2vw;
+  font-size: 2.5vw;
 }/*# sourceMappingURL=style.css.map */
