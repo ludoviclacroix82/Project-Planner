@@ -1,0 +1,27 @@
+.header-container {
+    height: 10vh;
+    background-color: $colorHeaderBackgroundLight;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-nom, .mode-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logo, .nom, .mode, .menu {
+    padding: 0 2vw;
+}
+
+
+.nom {
+    font-family: Righteous;
+    font-size: 0.5em;
+    color: $colorHeaderTextLight;
+    margin: 0;
+}
