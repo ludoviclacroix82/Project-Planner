@@ -1,5 +1,5 @@
 // CREATE DIV
-function createDiv(type,parent,content,className) {
+export function createDiv(type,parent,content,className) {
   const newDiv=document.createElement(type);
   if (type!=null) {
     newDiv.innerHTML=content;
@@ -13,14 +13,14 @@ function createDiv(type,parent,content,className) {
 
 //------------------------------------------------------------------------------------------
 // SLEEP FUNCTION
-function sleep(ms) {
+export function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 //------------------------------------------------------------------------------------------
 
 // ESCAPE HTML
-function escapeHtml(text) {
+export function escapeHtml(text) {
   var map = {
     '&': '&amp;',
     '<': '&lt;',
@@ -35,14 +35,14 @@ function escapeHtml(text) {
 //------------------------------------------------------------------------------------------
 
 // IS MOBILE
-function isMobile() {
+export function isMobile() {
   return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
 
 //------------------------------------------------------------------------------------------
 
 // RANDOM COLOR
-function randomColor() {
+export function randomColor() {
   const randomColor = Math.floor(Math.random()*16777215).toString(16);
   return '#'+randomColor;
 }
