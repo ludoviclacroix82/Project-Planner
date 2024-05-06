@@ -474,5 +474,7 @@ main {
           margin-right: 10px; }
         main section .todo .footer::first-letter, main section .doing .footer::first-letter, main section .done .footer::first-letter {
           text-transform: capitalize; }
+        main section .todo .footer:hover, main section .doing .footer:hover, main section .done .footer:hover {
+          color: var(--colorMainText); }
 
 /*# sourceMappingURL=style.css.map */

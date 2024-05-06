@@ -77,6 +77,9 @@ main{
                     &::first-letter{
                         text-transform: capitalize;
                     }
+                    &:hover{
+                        color: var(--colorMainText);
+                    }
                 }
             }
             .todo{
