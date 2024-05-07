@@ -1,5 +1,5 @@
 footer {
-    @include box(100%,10vh);
+    @include box(100%,10dvh);
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -19,12 +19,12 @@ footer {
             cursor:pointer;
         }
         img:hover {
-            transform: scale(110%);
+            transform: scale(120%);
         }
     }
 
     p {
-        font-size: 2.5vw;
+        font-size: 1rem;
     }
 }
 
