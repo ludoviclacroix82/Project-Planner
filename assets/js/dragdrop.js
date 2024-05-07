@@ -9,65 +9,42 @@ export function dragDrop() {
 
     let draggedItem = null;
 
-    // Ajout d'un écouteur d'événements à chaque élément de liste pour "dragstart" et "dragend"
+    // Fonction pour gérer le début du glissement ou du toucher
+    function DragStart(event) {
+        console.log("drag start");
+        draggedItem = event.target;
+    }
+
+    // Fonction pour gérer la fin du glissement ou du toucher
+    function DragEnd(event) {
+        console.log("drag end");
+        draggedItem = null;
+    }
+
+    // Fonction pour gérer le dépôt d'un élément glissé
+    function Drop(event) {
+        event.preventDefault();
+        if (draggedItem !== null)
+            event.target.appendChild(draggedItem);
+    }
+    // événements pour les tasks
     listItems.forEach((listItem) => {
-        listItem.addEventListener("dragstart", (event) => {
-            console.log("drag start");
-            draggedItem = listItem;
-        });
-
-        listItem.addEventListener("dragend", (event) => {
-            console.log("drag end");
-            draggedItem = null;
-        });
-        
-        // Événements tactiles
-        listItem.addEventListener("touchstart", (event) => {
-            console.log("drag start");
-            draggedItem = listItem;
-            console.log(draggedItem);
-            swipe(true);
-        });
-
-        listItem.addEventListener("touchend", (event) => {
-            console.log("drag end");
-            draggedItem = null;
-            swipe(true);
-        });
+        listItem.addEventListener("dragstart", DragStart);
+        listItem.addEventListener("dragend", DragEnd);
+        listItem.removeEventListener("touchstart", DragStart);
+        listItem.removeEventListener("touchend", DragEnd);
     });
 
-    // Écouteurs d'événements pour les listes
+    // Ajouter les écouteurs d'événements pour les zone done-doing to do
     lists.forEach((list) => {
-        list.addEventListener("dragenter", (event) => {
-            event.preventDefault();
-        });
+        list.addEventListener("dragenter", (event) => event.preventDefault());
+        list.addEventListener("dragover", (event) => event.preventDefault());
+        list.addEventListener("dragleave", (event) => event.preventDefault());
+        list.addEventListener("drop", Drop);
 
-        list.addEventListener("dragover", (event) => {
-            event.preventDefault();
-        });
-
-        list.addEventListener("dragleave", (event) => {
-            event.preventDefault();
-        });
-        list.addEventListener("drop", (event) => {
-            if (draggedItem != null)
-                list.appendChild(draggedItem);
-        });
-
-        // Événements tactiles
-        list.addEventListener("touchstart", (event) => {
-            console.log("touch start");
-            event.preventDefault();
-        });
-        list.addEventListener("touchmove", (event) => {
-            console.log("touch move");
-            event.preventDefault();
-        });
-        list.addEventListener("touchend", (event) => {
-            console.log("touch end");
-            event.preventDefault();
-            if (draggedItem != null)
-                list.appendChild(draggedItem);
-        });
+        //événements tactiles 
+        list.addEventListener("touchstart",(event) => event.preventDefault());
+        list.addEventListener("touchmove", (event) =>event.preventDefault());
+        list.addEventListener("touchend", Drop);
     });
 }
