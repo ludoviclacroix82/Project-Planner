@@ -1,60 +1,79 @@
+import { swipe } from "./swipe.js";
+
 const listItems = document.querySelectorAll(".task");
 const lists = document.querySelectorAll(".list");
 
 let draggedItem = null;
 
 listItems.forEach((listItem) => {
-  listItem.addEventListener("dragstart", (e) => {
-    console.log("drag start");
-    draggedItem = listItem;
-    setTimeout(() => {
-      e.target.classList.add("dragging");
-    }, 0);
-  });
+    listItem.addEventListener("dragstart", (event) => {
+        console.log("drag start");
+        draggedItem = listItem;
+        setTimeout(() => {
+            event.target.classList.add("dragging");
+        }, 0);
+    });
 
-  listItem.addEventListener("dragend", (e) => {
-    console.log("drag end");
-    draggedItem = null;
-    setTimeout(() => {
-      e.target.classList.remove("dragging");
-    }, 0);
-  });
-  // Événements tactiles
-  listItem.addEventListener("touchstart", (e) => {
-    console.log("début du toucher");
-    draggedItem = listItem;
-    setTimeout(() => {
-      e.target.classList.add("glisser");
-    }, 0);
-  });
+    listItem.addEventListener("dragend", (event) => {
+        console.log("drag end");
+        draggedItem = null;
+        setTimeout(() => {
+            event.target.classList.remove("dragging");
+        }, 0);
+    });
+    // Événements tactiles
+    listItem.addEventListener("touchstart", (event) => {
+        console.log("drag start");
+        draggedItem = listItem;
+        setTimeout(() => {
+            event.target.classList.add("dragging");
+        }, 0);
+        swipe(true);
+    });
 
-  listItem.addEventListener("touchend", (e) => {
-    console.log("fin du toucher");
-    draggedItem = null;
-    setTimeout(() => {
-      e.target.classList.remove("glisser");
-    }, 0);
-  });
+    listItem.addEventListener("touchend", (event) => {
+        console.log("drag end");
+        draggedItem = null;
+        setTimeout(() => {
+            event.target.classList.remove("dragging");
+        }, 0);
+        swipe(true);
+    });
 });
 
-
-
 lists.forEach((list) => {
-  list.addEventListener("dragenter", (e) => {
-    e.preventDefault();
-    list.classList.add("zonetasks");
-  });
+    list.addEventListener("dragenter", (event) => {
+        event.preventDefault();
+        list.classList.add("zonetasks");
+    });
 
-  list.addEventListener("dragover", (e) => {
-    e.preventDefault();
-  });
+    list.addEventListener("dragover", (event) => {
+        event.preventDefault();
+    });
 
-  list.addEventListener("dragleave", (e) => {
-    list.classList.remove("zonetasks");
-  });
+    list.addEventListener("dragleave", (event) => {
+        list.classList.remove("zonetasks");
+    });
 
-  list.addEventListener("drop", (e) => {
-    list.appendChild(draggedItem);
-    list.classList.remove("zonetasks");
-  });
+    list.addEventListener("drop", (event) => {
+        list.appendChild(draggedItem);
+        list.classList.remove("zonetasks");
+    });
+    // Événements tactiles
+    list.addEventListener("touchstart", (event) => {
+        event.preventDefault();
+        list.classList.add("zonetasks");
+        console.log(event);
+    });
+    list.addEventListener("touchover", (event) => {
+        event.preventDefault();
+    });
+    list.addEventListener("touchcancel", (event) => {
+        list.classList.remove("zonetasks");
+    });
+    list.addEventListener("touchend", (event) => {
+        //list.appendChild(draggedItem);
+        console.log(draggedItem);
+        list.classList.remove("zonetasks");
+    });
 });
