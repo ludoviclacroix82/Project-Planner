@@ -13,6 +13,7 @@ export function dragDrop() {
     function DragStart(event) {
         console.log("drag start");
         draggedItem = event.target;
+        console.log(event.target);
     }
 
     // Fonction pour gérer la fin du glissement ou du toucher
@@ -27,12 +28,25 @@ export function dragDrop() {
         if (draggedItem !== null)
             event.target.appendChild(draggedItem);
     }
+    function DropMobile(event) {
+        event.preventDefault();
+        if (draggedItem !== null)
+            event.target.appendChild(draggedItem);
+    }
+    function DragStartMobile(event) {
+        console.log("drag start");
+        /*draggedItem = e.targetTouches[0];
+        console.log(event.target);
+        swipe(true);*/
+
+    }
     // événements pour les tasks
     listItems.forEach((listItem) => {
-        listItem.addEventListener("dragstart", DragStart);
+        listItem.addEventListener("dragstart",  DragStart);
         listItem.addEventListener("dragend", DragEnd);
-        listItem.removeEventListener("touchstart", DragStart);
-        listItem.removeEventListener("touchend", DragEnd);
+        //événements tactiles 
+        listItem.removeEventListener("touchstart",DragStartMobile);
+        //listItem.removeEventListener("touchend", DragEnd);
     });
 
     // Ajouter les écouteurs d'événements pour les zone done-doing to do
@@ -43,8 +57,8 @@ export function dragDrop() {
         list.addEventListener("drop", Drop);
 
         //événements tactiles 
-        list.addEventListener("touchstart",(event) => event.preventDefault());
-        list.addEventListener("touchmove", (event) =>event.preventDefault());
-        list.addEventListener("touchend", Drop);
+        //list.addEventListener("touchstart",(event) => event.preventDefault());
+        //list.addEventListener("touchmove", (event) =>event.preventDefault());
+        //list.addEventListener("touchend", DropMobile);
     });
 }
