@@ -358,6 +358,10 @@ html[data-theme="light"] {
   --colorHeaderText:#456375;
   --colorMainBackground:linear-gradient(#C6EAFF, #2C9FDF);
   --colorMainText:#456375;
+  --colorListBackground:#ffffff;
+  --colorListHeaderBackground:#AACBDD;
+  --colorTaskBackground:#ECF1F4;
+  --colorTaskText:#456375;
   --colorFooterBackground:#AACBDD;
   --colorFooterText:#456375; }
 
@@ -366,6 +370,10 @@ html[data-theme="dark"] {
   --colorHeaderText:#ffffff;
   --colorMainBackground:linear-gradient(#465B66, #000000);
   --colorMainText:#ffffff;
+  --colorListBackground:#5E849B;
+  --colorListHeaderBackground:#456375;
+  --colorTaskBackground:#456375;
+  --colorTaskText:#ffffff;
   --colorFooterBackground:#456375;
   --colorFooterText:#ffffff; }
 
@@ -375,10 +383,19 @@ html[data-theme="dark"] {
 .svgDarkMode {
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(240deg) brightness(98%) contrast(105%); }
 
+<<<<<<< HEAD
 .righteous-regular, main section .todo, main section .doing, main section .done {
   font-family: "Righteous", sans-serif;
   font-weight: 400;
   font-style: normal; }
+=======
+.righteous-regular, #form h2, main section .done .header, main section .doing .header, main section .todo .header {
+  font-family: "Righteous", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.07rem;
+}
+>>>>>>> origin/tasha
 
 footer {
   width: 100%;
@@ -403,6 +420,11 @@ footer {
   footer p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
 
 .header-container {
   height: 10dvh;
@@ -440,6 +462,7 @@ main {
   height: 80dvh;
   background: var(--colorMainBackground); }
   main section {
+<<<<<<< HEAD
     width: 100%;
     height: 100%;
     padding: 0px 50px;
@@ -526,6 +549,107 @@ main {
       transform: scale(120%); }
   .list .task:hover {
     border: solid 1px blue; }
+=======
+    justify-content: flex-start;
+  }
+}
+main section .done, main section .doing, main section .todo {
+  font-weight: 400;
+  color: var(--colorTaskText);
+  background-color: var(--colorListBackground);
+  position: relative;
+  width: 325px;
+  height: 65dvh;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+main section .done .header, main section .doing .header, main section .todo .header {
+  width: 100%;
+  height: 8dvh;
+  background-color: var(--colorListHeaderBackground);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: var(--colorMainText);
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+main section .done .header h2, main section .doing .header h2, main section .todo .header h2 {
+  width: 50%;
+}
+@media only screen and (min-width: 400px) {
+  main section .done .header h2, main section .doing .header h2, main section .todo .header h2 {
+    font-size: 1.1rem;
+    padding-left: 20px;
+  }
+}
+main section .done .header h2::first-letter, main section .doing .header h2::first-letter, main section .todo .header h2::first-letter {
+  text-transform: capitalize;
+}
+main section .done .header img, main section .doing .header img, main section .todo .header img {
+  position: absolute;
+  left: 85%;
+}
+main section .done .footer, main section .doing .footer, main section .todo .footer {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+@media only screen and (min-width: 400px) {
+  main section .done .footer, main section .doing .footer, main section .todo .footer {
+    font-size: 1.1rem;
+    padding-left: 20px;
+  }
+}
+main section .done .footer::before, main section .doing .footer::before, main section .todo .footer::before {
+  content: "+";
+  margin-right: 10px;
+}
+main section .done .footer::first-letter, main section .doing .footer::first-letter, main section .todo .footer::first-letter {
+  text-transform: capitalize;
+}
+main section .done .footer:hover, main section .doing .footer:hover, main section .todo .footer:hover {
+  color: var(--colorMainText);
+}
+.list {
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 50dvh;
+}
+.list .task {
+  width: 95%;
+  height: 8%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.7rem;
+  color: var(--colorTaskText);
+  background-color: var(--colorTaskBackground);
+  border-radius: 0.6vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-left: 2.5%;
+  margin-top: 5px;
+  color: var(--colorHeaderText);
+  background-color: var(--colorHeader);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  cursor: grab;
+}
+.list .task img {
+  height: 60%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.list .task img:hover {
+  transform: scale(120%);
+}
+.list .task:hover {
+  border: solid 1px blue;
+}
+>>>>>>> origin/tasha
 
 #form {
   z-index: 10;
@@ -538,9 +662,10 @@ main {
   transform: translate(-50%, -50%);
   width: 80%;
   height: 60%;
-  background-color: white;
-  border-radius: 30px;
+  background-color: var(-colorListBackground);
+  border-radius: 1vh;
   padding: 0;
+<<<<<<< HEAD
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
   #form #formContainer {
     width: 100%;
@@ -569,6 +694,49 @@ main {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center; }
+=======
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  color: var(--colorTaskText);
+  background-color: var(--colorListBackground);
+}
+#form #formContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#form h2 {
+  width: 100%;
+  height: 10%;
+  background-color: var(--colorListHeaderBackground);
+  color: var(--colorHeaderText);
+  text-align: center;
+}
+#form #closeForm {
+  height: 5%;
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#form #closeForm:hover {
+  transform: scale(120%);
+}
+#form #formInputs {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#form input {
+  color: var(--colorTaskText);
+  background-color: var(--colorListBackground);
+  border-radius: 0.6vh;
+}
+>>>>>>> origin/tasha
 
 body {
   overflow: hidden; }
