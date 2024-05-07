@@ -7,7 +7,7 @@ import {createList,form,closeForm,addForm} from "./list.js";
 const data = JSON.parse(localStorage.getItem("data") || "[]");
 if (data != null) {
   data.forEach((element) => {
-    const parent=document.querySelector('.'+element.state)
+    const parent=document.querySelector('#'+element.state)
     createList(parent, element.name, element.description, element.date);
   });
 }

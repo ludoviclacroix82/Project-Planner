@@ -2,7 +2,8 @@ import {createDiv, sleep} from "./fnc.js";
 
 //CREATE LIST
 export function createList(parent,name,description,date) {
-    console.log(name);
+
+    createTask(parent,name,description,date)
 }
 
 //FORM
@@ -24,6 +25,7 @@ export function addForm() {
     const form=document.querySelector('#form')
     const state=form.getAttribute('addTo')
     
+    //form values
     const parent=document.querySelector('#'+state)
     const name=document.querySelector('#taskID').value 
     const description=document.querySelector('#descriptionID').value 
@@ -32,6 +34,13 @@ export function addForm() {
 
     createTask(parent,name,description,date,remaining)
 
+    //local storage
+    const newTask = {state:state, name: name, description: description, date: date };
+    let tasks = JSON.parse(localStorage.getItem('data') || '[]');
+    tasks.push(newTask);
+    localStorage.setItem('data', JSON.stringify(tasks));
+
+    //reset form
     document.querySelector('#taskID').value=''
     document.querySelector('#descriptionID').value='' 
     document.querySelector('#deadlineID').value=''
@@ -40,7 +49,7 @@ export function addForm() {
 }
 
 //CREATE TASK
-function createTask(parent,name,description,date,remaining) {
+function createTask(parent,name,description,date) {
     const taskContainer=createDiv('div',parent,null,'task')
     taskContainer.setAttribute('draggable',true)
 
