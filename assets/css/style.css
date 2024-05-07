@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 *, *::before, *::after {
+<<<<<<< HEAD
   box-sizing: border-box;
 }
 
@@ -24,6 +25,26 @@ img, picture, video, canvas, svg {
 input, button, textarea, select {
   font: inherit;
 }
+=======
+  box-sizing: border-box; }
+
+* {
+  margin: 0; }
+
+html {
+  height: 100%; }
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased; }
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%; }
+
+input, button, textarea, select {
+  font: inherit; }
+>>>>>>> origin/ludovic
 
 p,
 h1,
@@ -32,12 +53,19 @@ h3,
 h4,
 h5,
 h6 {
+<<<<<<< HEAD
   overflow-wrap: break-word;
 }
 
 #root, #__next {
   isolation: isolate;
 }
+=======
+  overflow-wrap: break-word; }
+
+#root, #__next {
+  isolation: isolate; }
+>>>>>>> origin/ludovic
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -47,9 +75,16 @@ h6 {
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
+<<<<<<< HEAD
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
+=======
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+>>>>>>> origin/ludovic
 
 /* Sections
    ========================================================================== */
@@ -57,15 +92,23 @@ html {
  * Remove the margin in all browsers.
  */
 body {
+<<<<<<< HEAD
   margin: 0;
 }
+=======
+  margin: 0; }
+>>>>>>> origin/ludovic
 
 /**
  * Render the `main` element consistently in IE.
  */
 main {
+<<<<<<< HEAD
   display: block;
 }
+=======
+  display: block; }
+>>>>>>> origin/ludovic
 
 /**
  * Correct the font size and margin on `h1` elements within `section` and
@@ -73,8 +116,12 @@ main {
  */
 h1 {
   font-size: 2em;
+<<<<<<< HEAD
   margin: 0.67em 0;
 }
+=======
+  margin: 0.67em 0; }
+>>>>>>> origin/ludovic
 
 /* Grouping content
    ========================================================================== */
@@ -83,19 +130,35 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
+<<<<<<< HEAD
   box-sizing: content-box; /* 1 */
   height: 0; /* 1 */
   overflow: visible; /* 2 */
 }
+=======
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+>>>>>>> origin/ludovic
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
+<<<<<<< HEAD
   font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
 }
+=======
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+>>>>>>> origin/ludovic
 
 /* Text-level semantics
    ========================================================================== */
@@ -103,27 +166,44 @@ pre {
  * Remove the gray background on active links in IE 10.
  */
 a {
+<<<<<<< HEAD
   background-color: transparent;
 }
+=======
+  background-color: transparent; }
+>>>>>>> origin/ludovic
 
 /**
  * 1. Remove the bottom border in Chrome 57-
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
+<<<<<<< HEAD
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
   -webkit-text-decoration: underline dotted;
           text-decoration: underline dotted; /* 2 */
 }
+=======
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+>>>>>>> origin/ludovic
 
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
 b,
 strong {
+<<<<<<< HEAD
   font-weight: bolder;
 }
+=======
+  font-weight: bolder; }
+>>>>>>> origin/ludovic
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
@@ -132,16 +212,27 @@ strong {
 code,
 kbd,
 samp {
+<<<<<<< HEAD
   font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
 }
+=======
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+>>>>>>> origin/ludovic
 
 /**
  * Add the correct font size in all browsers.
  */
 small {
+<<<<<<< HEAD
   font-size: 80%;
 }
+=======
+  font-size: 80%; }
+>>>>>>> origin/ludovic
 
 /**
  * Prevent `sub` and `sup` elements from affecting the line height in
@@ -152,6 +243,7 @@ sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
+<<<<<<< HEAD
   vertical-align: baseline;
 }
 
@@ -162,6 +254,15 @@ sub {
 sup {
   top: -0.5em;
 }
+=======
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+>>>>>>> origin/ludovic
 
 /* Embedded content
    ========================================================================== */
@@ -169,8 +270,12 @@ sup {
  * Remove the border on images inside links in IE 10.
  */
 img {
+<<<<<<< HEAD
   border-style: none;
 }
+=======
+  border-style: none; }
+>>>>>>> origin/ludovic
 
 /* Forms
    ========================================================================== */
@@ -183,57 +288,99 @@ input,
 optgroup,
 select,
 textarea {
+<<<<<<< HEAD
   font-family: inherit; /* 1 */
   font-size: 100%; /* 1 */
   line-height: 1.15; /* 1 */
   margin: 0; /* 2 */
 }
+=======
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+>>>>>>> origin/ludovic
 
 /**
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
  */
 button,
+<<<<<<< HEAD
 input { /* 1 */
   overflow: visible;
 }
+=======
+input {
+  /* 1 */
+  overflow: visible; }
+>>>>>>> origin/ludovic
 
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
  */
 button,
+<<<<<<< HEAD
 select { /* 1 */
   text-transform: none;
 }
+=======
+select {
+  /* 1 */
+  text-transform: none; }
+>>>>>>> origin/ludovic
 
 /**
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
+<<<<<<< HEAD
 [type=button]::-moz-focus-inner,
 [type=reset]::-moz-focus-inner,
 [type=submit]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
+=======
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+>>>>>>> origin/ludovic
 
 /**
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
+<<<<<<< HEAD
 [type=button]:-moz-focusring,
 [type=reset]:-moz-focusring,
 [type=submit]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
+=======
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+>>>>>>> origin/ludovic
 
 /**
  * Correct the padding in Firefox.
  */
 fieldset {
+<<<<<<< HEAD
   padding: 0.35em 0.75em 0.625em;
 }
+=======
+  padding: 0.35em 0.75em 0.625em; }
+>>>>>>> origin/ludovic
 
 /**
  * 1. Correct the text wrapping in Edge and IE.
@@ -242,6 +389,7 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
+<<<<<<< HEAD
   box-sizing: border-box; /* 1 */
   color: inherit; /* 2 */
   display: table; /* 1 */
@@ -249,54 +397,103 @@ legend {
   padding: 0; /* 3 */
   white-space: normal; /* 1 */
 }
+=======
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+>>>>>>> origin/ludovic
 
 /**
  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
 progress {
+<<<<<<< HEAD
   vertical-align: baseline;
 }
+=======
+  vertical-align: baseline; }
+>>>>>>> origin/ludovic
 
 /**
  * Remove the default vertical scrollbar in IE 10+.
  */
 textarea {
+<<<<<<< HEAD
   overflow: auto;
 }
+=======
+  overflow: auto; }
+>>>>>>> origin/ludovic
 
 /**
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
+<<<<<<< HEAD
 [type=checkbox],
 [type=radio] {
   box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
 }
+=======
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+>>>>>>> origin/ludovic
 
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
+<<<<<<< HEAD
 [type=number]::-webkit-inner-spin-button,
 [type=number]::-webkit-outer-spin-button {
   height: auto;
 }
+=======
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+>>>>>>> origin/ludovic
 
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
+<<<<<<< HEAD
 [type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
+=======
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+>>>>>>> origin/ludovic
 
 /**
  * 1. Correct the inability to style clickable types in iOS and Safari.
  * 2. Change font properties to `inherit` in Safari.
  */
 ::-webkit-file-upload-button {
+<<<<<<< HEAD
   -webkit-appearance: button; /* 1 */
   font: inherit; /* 2 */
 }
+=======
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+>>>>>>> origin/ludovic
 
 /* Interactive
    ========================================================================== */
@@ -304,15 +501,23 @@ textarea {
  * Add the correct display in Edge, IE 10+, and Firefox.
  */
 details {
+<<<<<<< HEAD
   display: block;
 }
+=======
+  display: block; }
+>>>>>>> origin/ludovic
 
 /*
  * Add the correct display in all browsers.
  */
 summary {
+<<<<<<< HEAD
   display: list-item;
 }
+=======
+  display: list-item; }
+>>>>>>> origin/ludovic
 
 /* Misc
    ========================================================================== */
@@ -320,13 +525,18 @@ summary {
  * Add the correct display in IE 10+.
  */
 template {
+<<<<<<< HEAD
   display: none;
 }
+=======
+  display: none; }
+>>>>>>> origin/ludovic
 
 /**
  * Add the correct display in IE 10.
  */
 [hidden] {
+<<<<<<< HEAD
   display: none;
 }
 
@@ -357,10 +567,17 @@ template {
 .fadeOut {
   animation: fadeOut 0.3s linear forwards;
 }
+=======
+  display: none; }
+
+.fadeOut {
+  animation: fadeOut 0.3s linear forwards; }
+>>>>>>> origin/ludovic
 
 @keyframes fadeOut {
   0% {
     opacity: 1;
+<<<<<<< HEAD
     filter: blur(0);
   }
   100% {
@@ -371,10 +588,19 @@ template {
 .fadeIn {
   animation: fadeIn 0.3s linear forwards;
 }
+=======
+    filter: blur(0); }
+  100% {
+    opacity: 0;
+    filter: blur(10px); } }
+.fadeIn {
+  animation: fadeIn 0.3s linear forwards; }
+>>>>>>> origin/ludovic
 
 @keyframes fadeIn {
   0% {
     opacity: 0;
+<<<<<<< HEAD
     filter: blur(10px);
   }
   100% {
@@ -413,6 +639,38 @@ html[data-theme=dark] {
   font-weight: 400;
   font-style: normal;
 }
+=======
+    filter: blur(10px); }
+  100% {
+    opacity: 1;
+    filter: blur(0); } }
+html[data-theme="light"] {
+  --colorHeaderBackground:#e1f4ff;
+  --colorHeaderText:#456375;
+  --colorMainBackground:linear-gradient(0deg, #2c9fdf 0%, #c6eaff 100%);
+  --colorMainText:#456375;
+  --colorFooterBackground:#e1f4ff;
+  --colorFooterText:#456375; }
+
+html[data-theme="dark"] {
+  --colorHeaderBackground:#456375;
+  --colorHeaderText:#e1f4ff;
+  --colorMainBackground:linear-gradient(0deg, #0c2c3d 0%, #3b474e 100%);
+  --colorMainText:#e1f4ff;
+  --colorFooterBackground:#456375;
+  --colorFooterText:#e1f4ff; }
+
+.svgLightMode {
+  filter: invert(34%) sepia(38%) saturate(376%) hue-rotate(159deg) brightness(97%) contrast(92%); }
+
+.svgDarkMode {
+  filter: invert(86%) sepia(11%) saturate(522%) hue-rotate(181deg) brightness(106%) contrast(103%); }
+
+.righteous-regular, main section .todo, main section .doing, main section .done {
+  font-family: "Righteous", sans-serif;
+  font-weight: 400;
+  font-style: normal; }
+>>>>>>> origin/ludovic
 
 footer {
   width: 100%;
@@ -423,6 +681,7 @@ footer {
   padding-left: 3%;
   padding-right: 3%;
   color: var(--colorFooterText);
+<<<<<<< HEAD
   background-color: var(--colorFooterBackground);
 }
 footer section {
@@ -442,31 +701,61 @@ footer p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
 }
+=======
+  background-color: var(--colorFooterBackground); }
+  footer section {
+    width: 25%;
+    display: flex;
+    justify-content: space-around; }
+    footer section img {
+      width: 20px;
+      transition: 0.3s;
+      cursor: pointer; }
+    footer section img:hover {
+      transform: scale(120%); }
+  footer p {
+    font-size: 1rem; }
+>>>>>>> origin/ludovic
 
 .header-container {
   height: 10dvh;
   background-color: var(--colorHeaderBackground);
+<<<<<<< HEAD
   color: var(--colorHeaderText);
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
+=======
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; }
+>>>>>>> origin/ludovic
 
 .logo-nom, .mode-menu {
   display: flex;
   flex-direction: row;
   align-items: center;
+<<<<<<< HEAD
   justify-content: space-around;
 }
 
 .logo, .nom, .mode, .menu {
   padding: 0 2vw;
 }
+=======
+  justify-content: space-around; }
+
+.logo, .nom, .mode, .menu {
+  padding: 0 2vw; }
+>>>>>>> origin/ludovic
 
 .nom {
   font-family: Righteous;
   font-size: 0.5em;
+<<<<<<< HEAD
   letter-spacing: 0.07rem;
   color: var(--colorHeaderText);
   margin: 0;
@@ -479,10 +768,15 @@ footer p {
 .mode img:hover, .menu img:hover {
   transform: scale(120%);
 }
+=======
+  color: var(--colorHeaderTextLight);
+  margin: 0; }
+>>>>>>> origin/ludovic
 
 main {
   width: 100%;
   height: 80dvh;
+<<<<<<< HEAD
   background: var(--colorMainBackground);
 }
 main section {
@@ -644,3 +938,77 @@ main section .done .footer:hover, main section .doing .footer:hover, main sectio
 body {
   overflow: hidden;
 }/*# sourceMappingURL=style.css.map */
+=======
+  background: var(--colorMainBackground); }
+  main section {
+    width: 100%;
+    height: 100%;
+    padding: 0px 50px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; }
+    @media only screen and (min-width: 400px) {
+      main section {
+        justify-content: flex-start; } }
+    main section .todo, main section .doing, main section .done {
+      position: relative;
+      width: 325px;
+      height: 90%;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
+      main section .todo .header, main section .doing .header, main section .done .header {
+        width: 100%;
+        height: 15%;
+        background-color: #AACBDD;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        color: var(--colorMainText);
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center; }
+        main section .todo .header h2, main section .doing .header h2, main section .done .header h2 {
+          width: 50%; }
+          @media only screen and (min-width: 400px) {
+            main section .todo .header h2, main section .doing .header h2, main section .done .header h2 {
+              font-size: 1.1rem;
+              padding-left: 20px; } }
+          main section .todo .header h2::first-letter, main section .doing .header h2::first-letter, main section .done .header h2::first-letter {
+            text-transform: capitalize; }
+        main section .todo .header img, main section .doing .header img, main section .done .header img {
+          position: absolute;
+          left: 85%; }
+      main section .todo .list, main section .doing .list, main section .done .list {
+        height: 72%;
+        overflow-y: auto; }
+      main section .todo .footer, main section .doing .footer, main section .done .footer {
+        display: flex;
+        align-items: center;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        position: absolute;
+        bottom: 3%;
+        left: 3%;
+        cursor: pointer; }
+        @media only screen and (min-width: 400px) {
+          main section .todo .footer, main section .doing .footer, main section .done .footer {
+            font-size: 1.1rem;
+            padding-left: 20px; } }
+        main section .todo .footer::before, main section .doing .footer::before, main section .done .footer::before {
+          content: '+';
+          margin-right: 10px; }
+        main section .todo .footer::first-letter, main section .doing .footer::first-letter, main section .done .footer::first-letter {
+          text-transform: capitalize; }
+        main section .todo .footer:hover, main section .doing .footer:hover, main section .done .footer:hover {
+          color: var(--colorMainText); }
+
+body {
+  overflow: hidden; }
+
+/*# sourceMappingURL=style.css.map */
+>>>>>>> origin/ludovic
