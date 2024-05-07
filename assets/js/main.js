@@ -85,19 +85,3 @@ export function darkmode() {
   //tasha
   logo.src = "assets/images/logo-light.svg";
 }
-
-// const data = [
-//     {
-//         state:'todo',
-//         name:'',
-//         description:'',
-//         date:''
-//     },
-//     {
-//         state:'doing',
-//         name:'',
-//         description:'',
-//         date:''
-//     },
-// ]
-

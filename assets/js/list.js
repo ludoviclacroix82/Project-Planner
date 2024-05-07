@@ -114,6 +114,13 @@ function createTask(parent,name,description,date,id) {
             arrow.src='assets/images/icons/arrow-down.svg'
         }
     })
+    //update darkmode
+    const darkmodeChoice=localStorage.getItem('darkmode')
+    if(darkmodeChoice=='true') {
+        darkmode()
+      } else {
+        lightmode()
+    }
 
     //task delete
     const taskRemove=createDiv('img',taskDiv1,null,'svg')
