@@ -45,11 +45,11 @@
                     <h2>to do</h2>
                     <img class="svg" src="assets/images/icons/cart menu.svg" alt="cart Menu">
                 </div>
-                <div class="list">
+                <div id="todo" class="list">
 
                 </div>
-                <div class="footer">
-                    ajouter une carte
+                <div class="footer" id="addTodo">
+                    <div>Add</div>
                 </div>
             </div>
             <div class="doing">
@@ -57,9 +57,9 @@
                     <h2>doing</h2>
                     <img class="svg" src="assets/images/icons/cart menu.svg" alt="cart Menu">
                 </div>
-                <div class="list"></div>
-                <div class="footer">
-                    ajouter une carte
+                <div id="doing" class="list"></div>
+                <div class="footer" id="addDoing">
+                    <div>Add</div>
                 </div>
             </div>
             <div class="done">
@@ -67,13 +67,43 @@
                     <h2>done</h2>
                     <img class="svg" src="assets/images/icons/cart menu.svg" alt="cart Menu">
                 </div>
-                <div class="list"></div>
-                <div class="footer">
-                    ajouter une carte
+                <div id="done" class="list"></div>
+                <div class="footer" id="addDone">
+                    <div>Add</div>
                 </div>
             </div>
         </section>
+
     </main>
+
+    <div id="form">
+        <div id="formContainer">
+            <h2>New task</h2>
+            <img id="closeForm" class="svg" src="assets/images/icons/close.svg" alt="close">
+
+            <div id="formInputs">
+                <div>
+                    <label for="task">Task:</label>
+                    <input type="text" name="task" id="taskID">
+                </div>
+
+                <div>
+                    <label for="description">Description:</label>
+                    <input type="text" name="description" id="descriptionID">
+                </div>
+                
+                <div>
+                    <label for="deadline">Deadline:</label>
+                    <input type="date" name="deadline" id="deadlineID">
+                </div>
+                
+                <input id="addButton" type="button" value="Add">
+            </div>
+            
+        </div>
+        
+    </div>
+
     <footer>
         <section>
             <img class="svg" src="assets/images/icons/github.svg" alt="github">

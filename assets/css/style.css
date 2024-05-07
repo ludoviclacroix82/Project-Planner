@@ -1,0 +1,635 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+.blurIn {
+  animation: blurOut 0.3s linear forwards;
+}
+
+@keyframes blurOut {
+  0% {
+    filter: blur(10px);
+  }
+  100% {
+    filter: blur(0);
+  }
+}
+.blurIn {
+  animation: blurIn 0.3s linear forwards;
+}
+
+@keyframes blurIn {
+  0% {
+    filter: blur(0);
+  }
+  100% {
+    filter: blur(10px);
+  }
+}
+.fadeOut {
+  animation: fadeOut 0.3s linear forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+}
+.fadeIn {
+  animation: fadeIn 0.3s linear forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+html[data-theme=light] {
+  --colorHeaderBackground:#e1f4ff;
+  --colorHeaderText:#456375;
+  --colorMainBackground:linear-gradient(0deg, rgb(44, 159, 223) 0%, rgb(198, 234, 255) 100%);
+  --colorMainText:#456375;
+  --colorFooterBackground:#e1f4ff;
+  --colorFooterText:#456375;
+}
+
+html[data-theme=dark] {
+  --colorHeaderBackground:#456375;
+  --colorHeaderText:#e1f4ff;
+  --colorMainBackground:linear-gradient(0deg, rgb(12, 44, 61) 0%, rgb(59, 71, 78) 100%);
+  --colorMainText:#e1f4ff;
+  --colorFooterBackground:#456375;
+  --colorFooterText:#e1f4ff;
+}
+
+.svgLightMode {
+  filter: invert(34%) sepia(38%) saturate(376%) hue-rotate(159deg) brightness(97%) contrast(92%);
+}
+
+.svgDarkMode {
+  filter: invert(86%) sepia(11%) saturate(522%) hue-rotate(181deg) brightness(106%) contrast(103%);
+}
+
+.righteous-regular, main section .done, main section .doing, main section .todo {
+  font-family: "Righteous", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+footer {
+  width: 100%;
+  height: 10dvh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 3%;
+  padding-right: 3%;
+  color: var(--colorFooterText);
+  background-color: var(--colorFooterBackground);
+}
+footer section {
+  width: 25%;
+  display: flex;
+  justify-content: space-around;
+}
+footer section img {
+  width: 20px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+footer section img:hover {
+  transform: scale(120%);
+}
+footer p {
+  font-size: 1rem;
+}
+
+.header-container {
+  height: 10dvh;
+  background-color: var(--colorHeaderBackground);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-nom, .mode-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logo, .nom, .mode, .menu {
+  padding: 0 2vw;
+}
+
+.nom {
+  font-family: Righteous;
+  font-size: 0.5em;
+  color: var(--colorHeaderText);
+  margin: 0;
+}
+
+main {
+  width: 100%;
+  height: 80dvh;
+  background: var(--colorMainBackground);
+}
+main section {
+  width: 100%;
+  height: 100%;
+  padding: 0px 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5%;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+@media only screen and (min-width: 400px) {
+  main section {
+    justify-content: flex-start;
+  }
+}
+main section .done, main section .doing, main section .todo {
+  position: relative;
+  width: 325px;
+  height: 65dvh;
+  max-height: 80%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+main section .done .header, main section .doing .header, main section .todo .header {
+  width: 100%;
+  height: 8dvh;
+  background-color: #AACBDD;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: var(--colorMainText);
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+main section .done .header h2, main section .doing .header h2, main section .todo .header h2 {
+  width: 50%;
+}
+@media only screen and (min-width: 400px) {
+  main section .done .header h2, main section .doing .header h2, main section .todo .header h2 {
+    font-size: 1.1rem;
+    padding-left: 20px;
+  }
+}
+main section .done .header h2::first-letter, main section .doing .header h2::first-letter, main section .todo .header h2::first-letter {
+  text-transform: capitalize;
+}
+main section .done .header img, main section .doing .header img, main section .todo .header img {
+  position: absolute;
+  left: 85%;
+}
+main section .done .footer, main section .doing .footer, main section .todo .footer {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+@media only screen and (min-width: 400px) {
+  main section .done .footer, main section .doing .footer, main section .todo .footer {
+    font-size: 1.1rem;
+    padding-left: 20px;
+  }
+}
+main section .done .footer::before, main section .doing .footer::before, main section .todo .footer::before {
+  content: "+";
+  margin-right: 10px;
+}
+main section .done .footer::first-letter, main section .doing .footer::first-letter, main section .todo .footer::first-letter {
+  text-transform: capitalize;
+}
+main section .done .footer:hover, main section .doing .footer:hover, main section .todo .footer:hover {
+  color: var(--colorMainText);
+}
+.list {
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 50dvh;
+}
+.list .task {
+  width: 95%;
+  height: 8%;
+  border: solid 1px var(--colorHeaderText);
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-left: 2.5%;
+  margin-top: 5px;
+  color: var(--colorHeaderText);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  cursor: grab;
+}
+.list .task img {
+  height: 60%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.list .task img:hover {
+  transform: scale(120%);
+}
+.list .task:hover {
+  border: solid 1px blue;
+}
+
+#form {
+  z-index: 10;
+  display: none;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 60%;
+  background-color: white;
+  border-radius: 30px;
+  padding: 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+#form #formContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#form h2 {
+  width: 100%;
+  height: 10%;
+  background-color: var(--colorHeaderBackground);
+  color: var(--colorHeaderText);
+  text-align: center;
+}
+#form #closeForm {
+  height: 5%;
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#form #closeForm:hover {
+  transform: scale(120%);
+}
+#form #formInputs {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+body {
+  overflow: hidden;
+}/*# sourceMappingURL=style.css.map */
