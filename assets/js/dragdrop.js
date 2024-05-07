@@ -20,6 +20,7 @@ export function dragDrop() {
             console.log("drag end");
             draggedItem = null;
         });
+        
         // Événements tactiles
         listItem.addEventListener("touchstart", (event) => {
             console.log("drag start");
@@ -46,8 +47,8 @@ export function dragDrop() {
         });
 
         list.addEventListener("dragleave", (event) => {
+            event.preventDefault();
         });
-
         list.addEventListener("drop", (event) => {
             if (draggedItem != null)
                 list.appendChild(draggedItem);
