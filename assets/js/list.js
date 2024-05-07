@@ -71,7 +71,7 @@ function createTask(parent,name,description,date) {
     const taskDiv1=createDiv('div',taskContainer,null,'div1')
 
     //task name
-    const taskName=createDiv('h3',taskDiv1,name)
+    createDiv('h3',taskDiv1,name)
 
     // Task remaining
     const now = new Date();
@@ -102,15 +102,15 @@ function createTask(parent,name,description,date) {
         const open=taskDiv2.getAttribute('open')
         console.log(open)
         if(open=='false') {
-            taskDiv2.style.display='none'
-            taskContainer.style.height='8%'
-            taskDiv2.setAttribute('open',true)
-            arrow.src='assets/images/icons/arrow-down.svg'
-        } else {
             taskDiv2.style.display='block'
             taskContainer.style.height='auto'
-            taskDiv2.setAttribute('open',false)
+            taskDiv2.setAttribute('open',true)
             arrow.src='assets/images/icons/arrow-up.svg'
+        } else {
+            taskDiv2.style.display='none'
+            taskContainer.style.height='8%'
+            taskDiv2.setAttribute('open',false)
+            arrow.src='assets/images/icons/arrow-down.svg'
         }
     })
 
