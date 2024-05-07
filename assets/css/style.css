@@ -416,27 +416,12 @@ html[data-theme=dark] {
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(240deg) brightness(98%) contrast(105%);
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.righteous-regular, main section .todo, main section .doing, main section .done {
-  font-family: "Righteous", sans-serif;
-  font-weight: 400;
-  font-style: normal; }
-=======
 .righteous-regular, #form h2, main section .done .header, main section .doing .header, main section .todo .header {
   font-family: "Righteous", sans-serif;
   font-weight: 400;
   font-style: normal;
   letter-spacing: 0.07rem;
 }
->>>>>>> origin/tasha
-=======
-.righteous-regular, main section .done, main section .doing, main section .todo {
-  font-family: "Righteous", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
->>>>>>> origin/arnaud
 
 footer {
   width: 100%;
@@ -527,95 +512,6 @@ main section {
 }
 @media only screen and (min-width: 400px) {
   main section {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    width: 100%;
-    height: 100%;
-    padding: 0px 50px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5%;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; }
-    @media only screen and (min-width: 400px) {
-      main section {
-        justify-content: flex-start; } }
-    main section .todo, main section .doing, main section .done {
-      position: relative;
-      width: 325px;
-      height: 65dvh;
-      max-height: 80%;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
-      main section .todo .header, main section .doing .header, main section .done .header {
-        width: 100%;
-        height: 8dvh;
-        background-color: #AACBDD;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        color: var(--colorMainText);
-        display: flex;
-        flex-direction: row;
-        justify-content: start;
-        align-items: center; }
-        main section .todo .header h2, main section .doing .header h2, main section .done .header h2 {
-          width: 50%; }
-          @media only screen and (min-width: 400px) {
-            main section .todo .header h2, main section .doing .header h2, main section .done .header h2 {
-              font-size: 1.1rem;
-              padding-left: 20px; } }
-          main section .todo .header h2::first-letter, main section .doing .header h2::first-letter, main section .done .header h2::first-letter {
-            text-transform: capitalize; }
-        main section .todo .header img, main section .doing .header img, main section .done .header img {
-          position: absolute;
-          left: 85%; }
-      main section .todo .footer, main section .doing .footer, main section .done .footer {
-        display: flex;
-        align-items: center; }
-        @media only screen and (min-width: 400px) {
-          main section .todo .footer, main section .doing .footer, main section .done .footer {
-            font-size: 1.1rem;
-            padding-left: 20px; } }
-        main section .todo .footer div, main section .doing .footer div, main section .done .footer div {
-          cursor: pointer; }
-          main section .todo .footer div::before, main section .doing .footer div::before, main section .done .footer div::before {
-            content: '+';
-            margin-right: 10px; }
-          main section .todo .footer div::first-letter, main section .doing .footer div::first-letter, main section .done .footer div::first-letter {
-            text-transform: capitalize; }
-          main section .todo .footer div:hover, main section .doing .footer div:hover, main section .done .footer div:hover {
-            color: var(--colorMainText); }
-
-.list {
-  overflow: hidden;
-  overflow-y: scroll;
-  height: 50dvh; }
-  .list .task {
-    width: 95%;
-    height: 8%;
-    border: solid 1px var(--colorHeaderText);
-    border-radius: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 2%;
-    padding-right: 2%;
-    margin-left: 2.5%;
-    margin-top: 5px;
-    color: var(--colorHeaderText);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    cursor: grab; }
-    .list .task img {
-      height: 60%;
-      cursor: pointer;
-      transition: 0.3s; }
-    .list .task img:hover {
-      transform: scale(120%); }
-  .list .task:hover {
-    border: solid 1px blue; }
-=======
     justify-content: flex-start;
   }
 }
@@ -634,71 +530,6 @@ main section .done .header, main section .doing .header, main section .todo .hea
   width: 100%;
   height: 8dvh;
   background-color: var(--colorListHeaderBackground);
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  color: var(--colorMainText);
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-}
-main section .done .header h2, main section .doing .header h2, main section .todo .header h2 {
-  width: 50%;
-}
-@media only screen and (min-width: 400px) {
-  main section .done .header h2, main section .doing .header h2, main section .todo .header h2 {
-    font-size: 1.1rem;
-    padding-left: 20px;
-  }
-}
-main section .done .header h2::first-letter, main section .doing .header h2::first-letter, main section .todo .header h2::first-letter {
-  text-transform: capitalize;
-}
-main section .done .header img, main section .doing .header img, main section .todo .header img {
-  position: absolute;
-  left: 85%;
-}
-main section .done .footer, main section .doing .footer, main section .todo .footer {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-@media only screen and (min-width: 400px) {
-  main section .done .footer, main section .doing .footer, main section .todo .footer {
-    font-size: 1.1rem;
-    padding-left: 20px;
-  }
-}
-main section .done .footer::before, main section .doing .footer::before, main section .todo .footer::before {
-  content: "+";
-  margin-right: 10px;
-}
-main section .done .footer::first-letter, main section .doing .footer::first-letter, main section .todo .footer::first-letter {
-  text-transform: capitalize;
-}
-main section .done .footer:hover, main section .doing .footer:hover, main section .todo .footer:hover {
-  color: var(--colorMainText);
-}
-.list {
-  overflow: hidden;
-  overflow-y: scroll;
-=======
-    justify-content: flex-start;
-  }
-}
-main section .done, main section .doing, main section .todo {
-  position: relative;
-  width: 325px;
-  height: 65dvh;
-  max-height: 80%;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}
-main section .done .header, main section .doing .header, main section .todo .header {
-  width: 100%;
-  height: 8dvh;
-  background-color: #AACBDD;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   color: var(--colorMainText);
@@ -749,51 +580,26 @@ main section .done .footer div:hover, main section .doing .footer div:hover, mai
 .list {
   overflow: hidden;
   overflow-y: scroll;
->>>>>>> origin/arnaud
   height: 50dvh;
 }
 .list .task {
   width: 95%;
   height: 8%;
-<<<<<<< HEAD
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.7rem;
   color: var(--colorTaskText);
   background-color: var(--colorTaskBackground);
   border-radius: 0.6vh;
   display: flex;
-  justify-content: space-between;
-=======
-  border: solid 1px var(--colorHeaderText);
-  border-radius: 30px;
-  display: flex;
   flex-direction: column;
   justify-content: center;
->>>>>>> origin/arnaud
   align-items: center;
   padding-left: 2%;
   padding-right: 2%;
   margin-left: 2.5%;
   margin-top: 5px;
   color: var(--colorHeaderText);
-<<<<<<< HEAD
   background-color: var(--colorHeader);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  cursor: grab;
-}
-.list .task img {
-  height: 60%;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.list .task img:hover {
-  transform: scale(120%);
-}
-.list .task:hover {
-  border: solid 1px blue;
-}
->>>>>>> origin/tasha
-=======
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   cursor: grab;
 }
@@ -818,7 +624,6 @@ main section .done .footer div:hover, main section .doing .footer div:hover, mai
 .list .task:hover {
   border: solid 1px blue;
 }
->>>>>>> origin/arnaud
 
 #form {
   z-index: 10;
@@ -834,43 +639,9 @@ main section .done .footer div:hover, main section .doing .footer div:hover, mai
   background-color: var(-colorListBackground);
   border-radius: 1vh;
   padding: 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
-  #form #formContainer {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column; }
-  #form h2 {
-    width: 100%;
-    height: 10%;
-    background-color: var(--colorHeaderBackground);
-    color: var(--colorHeaderText);
-    text-align: center; }
-  #form #closeForm {
-    height: 5%;
-    position: absolute;
-    top: 2%;
-    right: 2%;
-    cursor: pointer;
-    transition: 0.3s; }
-  #form #closeForm:hover {
-    transform: scale(120%); }
-  #form #formInputs {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center; }
-=======
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   color: var(--colorTaskText);
   background-color: var(--colorListBackground);
-=======
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
->>>>>>> origin/arnaud
 }
 #form #formContainer {
   width: 100%;
@@ -881,11 +652,7 @@ main section .done .footer div:hover, main section .doing .footer div:hover, mai
 #form h2 {
   width: 100%;
   height: 10%;
-<<<<<<< HEAD
   background-color: var(--colorListHeaderBackground);
-=======
-  background-color: var(--colorHeaderBackground);
->>>>>>> origin/arnaud
   color: var(--colorHeaderText);
   text-align: center;
 }
@@ -908,15 +675,11 @@ main section .done .footer div:hover, main section .doing .footer div:hover, mai
   justify-content: space-evenly;
   align-items: center;
 }
-<<<<<<< HEAD
 #form input {
   color: var(--colorTaskText);
   background-color: var(--colorListBackground);
   border-radius: 0.6vh;
 }
->>>>>>> origin/tasha
-=======
->>>>>>> origin/arnaud
 
 body {
   overflow: hidden;
