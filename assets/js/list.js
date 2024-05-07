@@ -1,4 +1,5 @@
 import {createDiv, sleep} from "./fnc.js";
+import {dragDrop} from "./dragdrop.js";
 
 //CREATE LIST
 export function createList(parent,name,description,date) {
@@ -51,6 +52,7 @@ export function addForm() {
     document.querySelector('#deadlineID').value=''
 
     closeForm()
+   
 }
 
 //CREATE TASK
@@ -84,6 +86,7 @@ function createTask(parent,name,description,date) {
             taskContainer.remove();
         }
     })
+    dragDrop()
     return taskContainer
 }
 
