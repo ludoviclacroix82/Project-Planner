@@ -1,10 +1,11 @@
 .header-container {
-    height: 10vh;
-    background-color: $colorHeaderBackgroundLight;
+    height: 10dvh;
+    background-color: var(--colorHeaderBackground);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+  
 }
 
 .logo-nom, .mode-menu {
@@ -22,6 +23,23 @@
 .nom {
     font-family: Righteous;
     font-size: 0.5em;
-    color: $colorHeaderTextLight;
+    color: var(--colorHeaderText);
     margin: 0;
+}
+
+.mode, .menu {
+    img {
+        transition:0.3s;
+        cursor:pointer;
+    }
+    img:hover {
+        transform: scale(120%);
+    }
+}
+
+.dark header {
+    & .header-container{
+        background-color: black;
+    }
+    
 }

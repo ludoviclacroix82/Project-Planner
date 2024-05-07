@@ -384,7 +384,6 @@ html[data-theme=dark] {
   filter: invert(86%) sepia(11%) saturate(522%) hue-rotate(181deg) brightness(106%) contrast(103%);
 }
 
-<<<<<<< HEAD
 .righteous-regular, main section .planner .done, main section .planner .doing, main section .planner .todo {
   font-family: "Righteous", sans-serif;
   font-weight: 400;
@@ -417,6 +416,45 @@ footer section img:hover {
 }
 footer p {
   font-size: 2.5vw;
+}
+
+.header-container {
+  height: 10dvh;
+  background-color: var(--colorHeaderBackground);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-nom, .mode-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logo, .nom, .mode, .menu {
+  padding: 0 2vw;
+}
+
+.nom {
+  font-family: Righteous;
+  font-size: 0.5em;
+  color: var(--colorHeaderText);
+  margin: 0;
+}
+
+.mode img, .menu img {
+  transition: 0.3s;
+  cursor: pointer;
+}
+.mode img:hover, .menu img:hover {
+  transform: scale(120%);
+}
+
+.dark header .header-container {
+  background-color: black;
 }
 
 main {
@@ -486,31 +524,4 @@ main section .planner .done .footer, main section .planner .doing .footer, main 
 main section .planner .done .footer::before, main section .planner .doing .footer::before, main section .planner .todo .footer::before {
   content: "+";
   margin-left: 10px;
-=======
-.header-container {
-  height: 10vh;
-  background-color: #e1f4ff;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo-nom, .mode-menu {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.logo, .nom, .mode, .menu {
-  padding: 0 2vw;
-}
-
-.nom {
-  font-family: Righteous;
-  font-size: 0.5em;
-  color: #456375;
-  margin: 0;
->>>>>>> origin/tasha
 }/*# sourceMappingURL=style.css.map */
