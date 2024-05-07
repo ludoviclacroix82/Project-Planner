@@ -1,12 +1,17 @@
 .header-container {
     height: 10dvh;
     background-color: var(--colorHeaderBackground);
+    color: var(--colorHeaderText);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
   
 }
+
+// .svg {
+//     filter: brightness(0) saturate(100%) invert(36%) sepia(22%) saturate(735%) hue-rotate(159deg) brightness(90%) contrast(82%);
+// }
 
 .logo-nom, .mode-menu {
     display: flex;
@@ -23,7 +28,8 @@
 .nom {
     font-family: Righteous;
     font-size: 0.5em;
-    color: var(--colorHeaderTextLight);
+    letter-spacing: 0.07rem;
+    color: var(--colorHeaderText);
     margin: 0;
 }
 
@@ -37,9 +43,3 @@
     }
 }
 
-.dark header {
-    & .header-container{
-        background-color: black;
-    }
-    
-}
