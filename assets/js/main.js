@@ -7,9 +7,14 @@ import {createList,form,closeForm,addForm} from "./list.js";
 const data = JSON.parse(localStorage.getItem("data") || "[]");
 if (data != null) {
   data.forEach((element) => {
-    const parent=document.querySelector('.'+element.state)
+    const parent=document.querySelector('#'+element.state)
     createList(parent, element.name, element.description, element.date);
   });
+}
+
+const index = JSON.parse(localStorage.getItem("index") || 0);
+if(index==0) {
+  localStorage.setItem('index',index)
 }
 
 //INIT SWIPE
@@ -55,7 +60,7 @@ modeButton.addEventListener("click", () => {
   }
 })
 
-function lightmode() {
+export function lightmode() {
   const logo = document.getElementsByClassName("logo")[0];
   const svgs = Array.from(document.querySelectorAll(".svg"));
   localStorage.setItem('darkmode',false)
@@ -68,7 +73,7 @@ function lightmode() {
   logo.src = "assets/images/logo-light.svg";//change logo
 }
 
-function darkmode() {
+export function darkmode() {
   const logo = document.getElementsByClassName("logo")[0];
   const svgs = Array.from(document.querySelectorAll(".svg"));
   localStorage.setItem('darkmode',true)
