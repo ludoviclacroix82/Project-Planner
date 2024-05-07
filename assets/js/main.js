@@ -43,7 +43,7 @@ modeButton.addEventListener("click", () => {
       svg.classList.add("svgDarkMode");
       
     });
-    logo.src = "assets/images/logo-dark.svg";
+    logo.src = "assets/images/logo-dark.svg";//change logo
   }
 });
 
