@@ -11,21 +11,32 @@ export function dragDrop() {
 
     // Fonction pour gérer le début du glissement ou du toucher
     function DragStart(event) {
-        console.log("drag start");
         draggedItem = event.target;
     }
 
     // Fonction pour gérer la fin du glissement ou du toucher
     function DragEnd(event) {
-        console.log("drag end");
         draggedItem = null;
     }
 
     // Fonction pour gérer le dépôt d'un élément glissé
     function Drop(event) {
         event.preventDefault();
-        if (draggedItem !== null)
+        if (draggedItem !== null) {
             event.target.appendChild(draggedItem);
+
+            //local storage
+            const id=draggedItem.id
+            const data = JSON.parse(localStorage.getItem("data") || "[]");
+
+            for(let i=0; i<data.length; i++) {
+                if(data[i].taskID==id) {
+                    data[i].state=event.target.id
+                }
+            }
+
+            localStorage.setItem('data', JSON.stringify(data))
+        }   
     }
     // événements pour les tasks
     listItems.forEach((listItem) => {

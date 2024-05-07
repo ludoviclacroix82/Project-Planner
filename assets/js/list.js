@@ -3,8 +3,8 @@ import {dragDrop} from "./dragdrop.js";
 import {darkmode, lightmode} from "./main.js";
 
 //CREATE LIST
-export function createList(parent,name,description,date) {
-    createTask(parent,name,description,date)
+export function createList(parent,name,description,date,id) {
+    createTask(parent,name,description,date,id)
 }
 
 //FORM
@@ -64,9 +64,10 @@ export function addForm() {
 }
 
 //CREATE TASK
-function createTask(parent,name,description,date) {
+function createTask(parent,name,description,date,id) {
     const taskContainer=createDiv('div',parent,null,'task')
     taskContainer.setAttribute('draggable',true)
+    taskContainer.id=id
 
     const taskDiv1=createDiv('div',taskContainer,null,'div1')
 
