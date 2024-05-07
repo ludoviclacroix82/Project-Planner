@@ -2,7 +2,6 @@ import {createDiv, sleep} from "./fnc.js";
 
 //CREATE LIST
 export function createList(parent,name,description,date) {
-
     createTask(parent,name,description,date)
 }
 
@@ -32,10 +31,16 @@ export function addForm() {
     const date=document.querySelector('#deadlineID').value
     const remaining='test'
 
-    createTask(parent,name,description,date,remaining)
+    const taskContainer=createTask(parent,name,description,date,remaining)
+    
+    //task id
+    const id=generateID(name)
+    taskContainer.id=id
+    let index=localStorage.getItem('index')
+    localStorage.setItem('index',parseInt(index)+1)
 
     //local storage
-    const newTask = {state:state, name: name, description: description, date: date };
+    const newTask = {state:state, name: name, description: description, date: date, taskID:id};
     let tasks = JSON.parse(localStorage.getItem('data') || '[]');
     tasks.push(newTask);
     localStorage.setItem('data', JSON.stringify(tasks));
@@ -79,6 +84,7 @@ function createTask(parent,name,description,date) {
             taskContainer.remove();
         }
     })
+    return taskContainer
 }
 
 //CLOSE FORM
@@ -95,4 +101,10 @@ export async function closeForm() {
     form.style.display='none'
     form.classList.remove('fadeOut')
     main.classList.remove('blurOut')
+}
+
+function generateID(name) {
+    const index=localStorage.getItem('index')
+    const id=name+index
+    return id
 }

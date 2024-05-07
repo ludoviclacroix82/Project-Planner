@@ -12,6 +12,11 @@ if (data != null) {
   });
 }
 
+const index = JSON.parse(localStorage.getItem("index") || 0);
+if(index==0) {
+  localStorage.setItem('index',index)
+}
+
 //INIT SWIPE
 swipe()
 
