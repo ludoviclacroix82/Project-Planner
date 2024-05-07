@@ -387,6 +387,10 @@ html[data-theme=light] {
   --colorHeaderText:#456375;
   --colorMainBackground:linear-gradient(#C6EAFF, #2C9FDF);
   --colorMainText:#456375;
+  --colorListBackground:#ffffff;
+  --colorListHeaderBackground:#AACBDD;
+  --colorTaskBackground:#ECF1F4;
+  --colorTaskText:#456375;
   --colorFooterBackground:#AACBDD;
   --colorFooterText:#456375;
 }
@@ -396,6 +400,10 @@ html[data-theme=dark] {
   --colorHeaderText:#ffffff;
   --colorMainBackground:linear-gradient(#465B66, #000000);
   --colorMainText:#ffffff;
+  --colorListBackground:#5E849B;
+  --colorListHeaderBackground:#456375;
+  --colorTaskBackground:#456375;
+  --colorTaskText:#ffffff;
   --colorFooterBackground:#456375;
   --colorFooterText:#ffffff;
 }
@@ -408,10 +416,11 @@ html[data-theme=dark] {
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(240deg) brightness(98%) contrast(105%);
 }
 
-.righteous-regular, main section .done, main section .doing, main section .todo {
+.righteous-regular, #form h2, main section .done .header, main section .doing .header, main section .todo .header {
   font-family: "Righteous", sans-serif;
   font-weight: 400;
   font-style: normal;
+  letter-spacing: 0.07rem;
 }
 
 footer {
@@ -441,6 +450,11 @@ footer section img:hover {
 footer p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
 }
 
 .header-container {
@@ -502,18 +516,20 @@ main section {
   }
 }
 main section .done, main section .doing, main section .todo {
+  font-weight: 400;
+  color: var(--colorTaskText);
+  background-color: var(--colorListBackground);
   position: relative;
   width: 325px;
   height: 65dvh;
   max-height: 80%;
-  background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 main section .done .header, main section .doing .header, main section .todo .header {
   width: 100%;
   height: 8dvh;
-  background-color: #AACBDD;
+  background-color: var(--colorListHeaderBackground);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   color: var(--colorMainText);
@@ -567,8 +583,11 @@ main section .done .footer:hover, main section .doing .footer:hover, main sectio
 .list .task {
   width: 95%;
   height: 8%;
-  border: solid 1px var(--colorHeaderText);
-  border-radius: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.7rem;
+  color: var(--colorTaskText);
+  background-color: var(--colorTaskBackground);
+  border-radius: 0.6vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -577,6 +596,7 @@ main section .done .footer:hover, main section .doing .footer:hover, main sectio
   margin-left: 2.5%;
   margin-top: 5px;
   color: var(--colorHeaderText);
+  background-color: var(--colorHeader);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   cursor: grab;
 }
@@ -603,10 +623,12 @@ main section .done .footer:hover, main section .doing .footer:hover, main sectio
   transform: translate(-50%, -50%);
   width: 80%;
   height: 60%;
-  background-color: white;
+  background-color: var(-colorListBackground);
   border-radius: 30px;
   padding: 0;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  color: var(--colorTaskText);
+  background-color: var(--colorListBackground);
 }
 #form #formContainer {
   width: 100%;
@@ -617,7 +639,7 @@ main section .done .footer:hover, main section .doing .footer:hover, main sectio
 #form h2 {
   width: 100%;
   height: 10%;
-  background-color: var(--colorHeaderBackground);
+  background-color: var(--colorListHeaderBackground);
   color: var(--colorHeaderText);
   text-align: center;
 }
@@ -639,6 +661,11 @@ main section .done .footer:hover, main section .doing .footer:hover, main sectio
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+}
+#form input {
+  color: var(--colorTaskText);
+  background-color: var(--colorListBackground);
+  border-radius: 0.6vh;
 }
 
 body {
