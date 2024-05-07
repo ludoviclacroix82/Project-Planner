@@ -76,5 +76,6 @@ lists.forEach((list) => {
         event.preventDefault();
             list.appendChild(draggedItem);
         list.classList.remove("zonetasks");
-    });
+    });    
+    
 });
