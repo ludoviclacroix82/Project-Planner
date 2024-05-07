@@ -19,7 +19,25 @@ listItems.forEach((listItem) => {
       e.target.classList.remove("dragging");
     }, 0);
   });
+  // Événements tactiles
+  listItem.addEventListener("touchstart", (e) => {
+    console.log("début du toucher");
+    draggedItem = listItem;
+    setTimeout(() => {
+      e.target.classList.add("glisser");
+    }, 0);
+  });
+
+  listItem.addEventListener("touchend", (e) => {
+    console.log("fin du toucher");
+    draggedItem = null;
+    setTimeout(() => {
+      e.target.classList.remove("glisser");
+    }, 0);
+  });
 });
+
+
 
 lists.forEach((list) => {
   list.addEventListener("dragenter", (e) => {
