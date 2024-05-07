@@ -383,29 +383,29 @@ template {
   }
 }
 html[data-theme=light] {
-  --colorHeaderBackground:#e1f4ff;
+  --colorHeaderBackground:#E0F4FF;
   --colorHeaderText:#456375;
-  --colorMainBackground:linear-gradient(0deg, rgb(44, 159, 223) 0%, rgb(198, 234, 255) 100%);
+  --colorMainBackground:linear-gradient(#C6EAFF, #2C9FDF);
   --colorMainText:#456375;
-  --colorFooterBackground:#e1f4ff;
+  --colorFooterBackground:#AACBDD;
   --colorFooterText:#456375;
 }
 
 html[data-theme=dark] {
   --colorHeaderBackground:#456375;
-  --colorHeaderText:#e1f4ff;
-  --colorMainBackground:linear-gradient(0deg, rgb(12, 44, 61) 0%, rgb(59, 71, 78) 100%);
-  --colorMainText:#e1f4ff;
+  --colorHeaderText:#ffffff;
+  --colorMainBackground:linear-gradient(#465B66, #000000);
+  --colorMainText:#ffffff;
   --colorFooterBackground:#456375;
-  --colorFooterText:#e1f4ff;
+  --colorFooterText:#ffffff;
 }
 
 .svgLightMode {
-  filter: invert(34%) sepia(38%) saturate(376%) hue-rotate(159deg) brightness(97%) contrast(92%);
+  filter: brightness(0) saturate(100%) invert(36%) sepia(22%) saturate(735%) hue-rotate(159deg) brightness(90%) contrast(82%);
 }
 
 .svgDarkMode {
-  filter: invert(86%) sepia(11%) saturate(522%) hue-rotate(181deg) brightness(106%) contrast(103%);
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(240deg) brightness(98%) contrast(105%);
 }
 
 .righteous-regular, main section .done, main section .doing, main section .todo {
@@ -439,12 +439,14 @@ footer section img:hover {
   transform: scale(120%);
 }
 footer p {
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
 }
 
 .header-container {
   height: 10dvh;
   background-color: var(--colorHeaderBackground);
+  color: var(--colorHeaderText);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -465,8 +467,17 @@ footer p {
 .nom {
   font-family: Righteous;
   font-size: 0.5em;
+  letter-spacing: 0.07rem;
   color: var(--colorHeaderText);
   margin: 0;
+}
+
+.mode img, .menu img {
+  transition: 0.3s;
+  cursor: pointer;
+}
+.mode img:hover, .menu img:hover {
+  transform: scale(120%);
 }
 
 main {
