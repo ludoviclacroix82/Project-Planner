@@ -609,7 +609,23 @@ main section .done .footer:hover, main section .doing .footer:hover, main sectio
   transform: scale(120%);
 }
 .list .task:hover {
-  border: solid 1px blue;
+  border: solid 1px var(--colorHeaderText);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 1vw;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: linear-gradient(var(--colorListHeaderBackground), var(--colorListBackground));
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--colorFooterBackground);
+  height: 1vw;
 }
 
 #form {
