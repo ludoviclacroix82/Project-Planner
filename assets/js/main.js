@@ -12,6 +12,9 @@ if (data != null) {
   });
 }
 
+//INIT SWIPE
+swipe()
+
 //INIT ADD TASK
 document.querySelector('#addTodo').addEventListener('click', () => {
   form('todo');
@@ -30,41 +33,53 @@ document.querySelector('#addButton').addEventListener('click', () => {
 })
 
 //Darkmode Tasha's changes 
-let darkmode = false;
-const modeButton = document.querySelector("#mode");
-const logo = document.getElementsByClassName("logo")[0];
-const svgs = Array.from(document.querySelectorAll(".svg"));
+let darkmodeChoice = localStorage.getItem('darkmode');
+if(darkmodeChoice==null) {
+  localStorage.setItem('darkmode',false)
+  lightmode()
+} else if(darkmodeChoice=='true') {
+  darkmode()
+} else {
+  lightmode()
+}
 
-document.addEventListener("DOMContentLoaded", () => {
-  svgs.forEach((svg) => {
-    svg.classList.add("svgLightMode");
-  });
-});
+
+const modeButton = document.querySelector("#mode");
 
 modeButton.addEventListener("click", () => {
-
-  if (darkmode) {
-    darkmode=false;
-    document.documentElement.setAttribute("data-theme", "light");
-      svgs.forEach((svg) => {
-      svg.classList.remove("svgDarkMode");//remove class to change color to light mode
-      svg.classList.add("svgLightMode");
-    });
-    //tasha
-    logo.src = "assets/images/logo-light.svg";
+  darkmodeChoice = localStorage.getItem('darkmode');
+  if(darkmodeChoice=='true') {
+    lightmode()
   } else {
-    darkmode=true;
-    document.documentElement.setAttribute("data-theme", "dark");
-      svgs.forEach((svg) => {
-      svg.classList.remove("svgLightMode");
-      svg.classList.add("svgDarkMode");
-
-    });
-    logo.src = "assets/images/logo-dark.svg";//change logo
+    darkmode()
   }
-});
+})
 
-swipe();
+function lightmode() {
+  const logo = document.getElementsByClassName("logo")[0];
+  const svgs = Array.from(document.querySelectorAll(".svg"));
+  localStorage.setItem('darkmode',false)
+  document.documentElement.setAttribute("data-theme", "light");
+    svgs.forEach((svg) => {
+    svg.classList.add("svgLightMode");
+    svg.classList.remove("svgDarkMode");
+
+  });
+  logo.src = "assets/images/logo-light.svg";//change logo
+}
+
+function darkmode() {
+  const logo = document.getElementsByClassName("logo")[0];
+  const svgs = Array.from(document.querySelectorAll(".svg"));
+  localStorage.setItem('darkmode',true)
+  document.documentElement.setAttribute("data-theme", "dark");
+    svgs.forEach((svg) => {
+    svg.classList.add("svgDarkMode");//remove class to change color to light mode
+    svg.classList.remove("svgLightMode");
+  });
+  //tasha
+  logo.src = "assets/images/logo-light.svg";
+}
 
 // const data = [
 //     {
