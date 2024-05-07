@@ -1,5 +1,6 @@
 import {createDiv, sleep} from "./fnc.js";
 import {dragDrop} from "./dragdrop.js";
+import {darkmode, lightmode} from "./main.js";
 
 //CREATE LIST
 export function createList(parent,name,description,date) {
@@ -33,6 +34,14 @@ export function addForm() {
     const remaining='test'
 
     const taskContainer=createTask(parent,name,description,date,remaining)
+
+    //update darkmode
+    const darkmodeChoice=localStorage.getItem('darkmode')
+    if(darkmodeChoice=='true') {
+        darkmode()
+      } else {
+        lightmode()
+    }
     
     //task id
     const id=generateID(name)
@@ -52,7 +61,6 @@ export function addForm() {
     document.querySelector('#deadlineID').value=''
 
     closeForm()
-   
 }
 
 //CREATE TASK
@@ -60,25 +68,54 @@ function createTask(parent,name,description,date) {
     const taskContainer=createDiv('div',parent,null,'task')
     taskContainer.setAttribute('draggable',true)
 
+    const taskDiv1=createDiv('div',taskContainer,null,'div1')
+
     //task name
-    const taskName=createDiv('h3',taskContainer,name)
+    const taskName=createDiv('h3',taskDiv1,name)
 
     // Task remaining
     const now = new Date();
     const taskDate = new Date(date);
     const timeDifference = taskDate.getTime() - now.getTime();
     const dayDifference = Math.ceil(timeDifference / (1000 * 3600 * 24));
-    let remainingText = dayDifference+' days remaining'
+    let remainingText = dayDifference+' days'
     if(dayDifference==1) {
-        remainingText = dayDifference+' day remaining'
+        remainingText = dayDifference+' day'
     } else if (dayDifference<=0) {
         remainingText = 'Too late!'
     }
 
-    const taskRemaining=createDiv('p',taskContainer,remainingText)
+    createDiv('p',taskDiv1,remainingText)
+
+    //task description
+    const arrow=createDiv('img',taskDiv1,null,'svg')
+    arrow.src='assets/images/icons/arrow-down.svg'
+
+    const taskDiv2=createDiv('div',taskContainer,null,'div2')
+    createDiv('h4',taskDiv2,'Description:')
+    createDiv('p',taskDiv2,description)
+
+    taskDiv2.style.display='none'
+    taskDiv2.setAttribute('open',false)
+
+    arrow.addEventListener('click', () => {
+        const open=taskDiv2.getAttribute('open')
+        console.log(open)
+        if(open=='false') {
+            taskDiv2.style.display='none'
+            taskContainer.style.height='8%'
+            taskDiv2.setAttribute('open',true)
+            arrow.src='assets/images/icons/arrow-down.svg'
+        } else {
+            taskDiv2.style.display='block'
+            taskContainer.style.height='auto'
+            taskDiv2.setAttribute('open',false)
+            arrow.src='assets/images/icons/arrow-up.svg'
+        }
+    })
 
     //task delete
-    const taskRemove=createDiv('img',taskContainer,null,'svg')
+    const taskRemove=createDiv('img',taskDiv1,null,'svg')
     taskRemove.src='assets/images/icons/remove.svg'
     taskRemove.alt='remove'
     taskRemove.addEventListener('click', () => {

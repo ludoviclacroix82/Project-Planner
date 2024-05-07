@@ -60,7 +60,7 @@ modeButton.addEventListener("click", () => {
   }
 })
 
-function lightmode() {
+export function lightmode() {
   const logo = document.getElementsByClassName("logo")[0];
   const svgs = Array.from(document.querySelectorAll(".svg"));
   localStorage.setItem('darkmode',false)
@@ -73,7 +73,7 @@ function lightmode() {
   logo.src = "assets/images/logo-light.svg";//change logo
 }
 
-function darkmode() {
+export function darkmode() {
   const logo = document.getElementsByClassName("logo")[0];
   const svgs = Array.from(document.querySelectorAll(".svg"));
   localStorage.setItem('darkmode',true)
