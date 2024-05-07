@@ -25,28 +25,16 @@ export function dragDrop() {
     // Fonction pour gérer le dépôt d'un élément glissé
     function Drop(event) {
         event.preventDefault();
-        if (draggedItem !== null)
-            event.target.appendChild(draggedItem);
+        if (draggedItem !== null && draggedItem.classList.contains("task") && event.target.classList.contains("list"))
+            event.target.append(draggedItem);
     }
-    function DropMobile(event) {
-        event.preventDefault();
-        if (draggedItem !== null)
-            event.target.appendChild(draggedItem);
-    }
-    function DragStartMobile(event) {
-        console.log("drag start");
-        /*draggedItem = e.targetTouches[0];
-        console.log(event.target);
-        swipe(true);*/
 
-    }
     // événements pour les tasks
     listItems.forEach((listItem) => {
         listItem.addEventListener("dragstart",  DragStart);
         listItem.addEventListener("dragend", DragEnd);
-        //événements tactiles 
-        listItem.removeEventListener("touchstart",DragStartMobile);
-        //listItem.removeEventListener("touchend", DragEnd);
+
+        
     });
 
     // Ajouter les écouteurs d'événements pour les zone done-doing to do
