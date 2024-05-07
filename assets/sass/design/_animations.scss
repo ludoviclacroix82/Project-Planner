@@ -1,3 +1,27 @@
+.blurIn {
+    animation:blurOut 0.3s linear forwards;
+}
+@keyframes blurOut {
+    0%{
+        filter:blur(10px);
+    }
+    100%{
+        filter:blur(0);
+    }
+}
+
+.blurIn {
+    animation:blurIn 0.3s linear forwards;
+}
+@keyframes blurIn {
+    0%{
+        filter:blur(0);
+    }
+    100%{
+        filter:blur(10px);
+    }
+}
+
 .fadeOut {
     animation:fadeOut 0.3s linear forwards;
 }
