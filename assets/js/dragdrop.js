@@ -23,7 +23,7 @@ export function dragDrop() {
     // Fonction pour gérer le dépôt d'un élément glissé
     function Drop(event) {
         event.preventDefault();
-        if (draggedItem !== null) {
+        if (draggedItem !== null && event.target.classList.contains('list') && draggedItem.classList.contains('task')) {
             event.target.appendChild(draggedItem);
 
             //local storage
