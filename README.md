@@ -3,9 +3,9 @@ To develop a project management tool that enables users to track the progress of
 
 ## Teams
 
-[NataliiaTasha](https://github.com/NataliiaTasha)
-[javadaller](https://github.com/javadaller)
-[ludoviclacroix82](https://github.com/ludoviclacroix82)
+- [NataliiaTasha](https://github.com/NataliiaTasha)
+- [javadaller](https://github.com/javadaller)
+- [ludoviclacroix82](https://github.com/ludoviclacroix82)
 
 ## Instructions
 
