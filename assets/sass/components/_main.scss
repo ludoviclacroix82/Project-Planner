@@ -14,7 +14,7 @@ main {
         align-items: center;
         overflow: hidden;
 
-        @include responsive(400px) {
+        @include responsive(300px) {
             justify-content:flex-start;
         }
 
