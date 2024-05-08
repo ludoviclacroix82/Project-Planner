@@ -33,7 +33,6 @@ export function dragDrop() {
     listItems.forEach((listItem) => {
         listItem.addEventListener('dragstart',  DragStart);
         listItem.addEventListener('dragend', DragEnd);
-        listItem.addEventListener('touchmove',DragStartMobile)      
     });
 
     // Ajouter les écouteurs d'événements pour les zone done-doing to do
