@@ -25,8 +25,8 @@ The link to the instructions is available [here](https://github.com/becodeorg/CR
 
 ## links
 
-You can access the project on GitHub Pages [here](https://ludoviclacroix82.github.io/Project-Planner/).
-You can access the Figma on the project [here](https://www.figma.com/design/jYs1kcGV292y2q2agbHTQa/BeCode-Planner?node-id=0-1&t=wVLyPGfl2dWyIU73-0) realised by [NataliiaTasha](https://github.com/NataliiaTasha)
+- You can access the project on GitHub Pages [here](https://ludoviclacroix82.github.io/Project-Planner/).
+- You can access the Figma on the project [here](https://www.figma.com/design/jYs1kcGV292y2q2agbHTQa/BeCode-Planner?node-id=0-1&t=wVLyPGfl2dWyIU73-0) realised by [NataliiaTasha](https://github.com/NataliiaTasha)
 
 ## Project Screenshot
 ![Desktop](resources/Desktop.png)
