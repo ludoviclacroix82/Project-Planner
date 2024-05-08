@@ -11,7 +11,8 @@ export function dragDrop() {
 
     // Fonction pour gérer le début du glissement ou du toucher
     function DragStart(event) {
-        draggedItem = event.target;
+            draggedItem = event.target;
+        
         console.log(event.target);
     }
 
