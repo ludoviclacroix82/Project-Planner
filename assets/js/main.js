@@ -1,6 +1,6 @@
 
 import {swipe} from "./swipe.js";
-import {sleep} from "./fnc.js";
+import {sort} from "./sort.js";
 import {createList,form,closeForm,addForm} from "./list.js";
 
 //INIT DATA
@@ -19,6 +19,9 @@ if(index==0) {
 
 //INIT SWIPE
 swipe()
+
+//INIT SORT
+sort()
 
 //INIT ADD TASK
 document.querySelector('#addTodo').addEventListener('click', () => {

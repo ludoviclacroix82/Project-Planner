@@ -553,6 +553,7 @@ main section .done .header h2::first-letter, main section .doing .header h2::fir
 main section .done .header img, main section .doing .header img, main section .todo .header img {
   position: absolute;
   left: 85%;
+  cursor: pointer;
 }
 main section .done .footer, main section .doing .footer, main section .todo .footer {
   display: flex;
@@ -675,10 +676,28 @@ main section .done .footer div:hover, main section .doing .footer div:hover, mai
   justify-content: space-evenly;
   align-items: center;
 }
+#form #formInputs #errorDisplay {
+  color: red;
+}
 #form input {
   color: var(--colorTaskText);
   background-color: var(--colorListBackground);
   border-radius: 0.6vh;
+}
+
+.sortMenu {
+  position: absolute;
+  top: 0;
+  right: 15%;
+  z-index: 10;
+  background-color: white;
+  color: black;
+}
+.sortMenu .sortOption {
+  cursor: pointer;
+}
+.sortMenu .sortOption:hover {
+  background-color: pink;
 }
 
 body {

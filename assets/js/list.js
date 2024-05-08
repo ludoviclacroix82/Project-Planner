@@ -1,4 +1,4 @@
-import {createDiv, sleep} from "./fnc.js";
+import {createDiv, sleep, escapeHtml} from "./fnc.js";
 import {dragDrop} from "./dragdrop.js";
 import {darkmode, lightmode} from "./main.js";
 
@@ -17,6 +17,9 @@ export async function form(state) {
     form.classList.add('fadeIn')
     main.classList.add('blurIn')
 
+    //errors
+    document.querySelector('#errorDisplay').innerHTML=''
+
     //button
     form.setAttribute('addTo',state)
 }
@@ -28,10 +31,19 @@ export function addForm() {
     
     //form values
     const parent=document.querySelector('#'+state)
-    const name=document.querySelector('#taskID').value 
-    const description=document.querySelector('#descriptionID').value 
+    const name=escapeHtml(document.querySelector('#taskID').value)
+    const description=escapeHtml(document.querySelector('#descriptionID').value )
     const date=document.querySelector('#deadlineID').value
     const remaining='test'
+
+    //erreurs
+    if(name=='') {
+        return error('empty name')
+    } else if(description=='') {
+        return error('empty description')
+    } else if(date=='') {
+        return error('empty date')
+    }
 
     const taskContainer=createTask(parent,name,description,date,remaining)
 
@@ -61,6 +73,11 @@ export function addForm() {
     document.querySelector('#deadlineID').value=''
 
     closeForm()
+}
+
+function error(type) {
+    const display=document.querySelector('#errorDisplay')
+    display.innerText=type;
 }
 
 //CREATE TASK
