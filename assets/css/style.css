@@ -398,6 +398,7 @@ footer {
   padding-left: 3%;
   padding-right: 3%;
   color: var(--colorFooterText);
+<<<<<<< HEAD
   background-color: var(--colorFooterBackground); }
   footer section {
     width: 25%;
@@ -412,6 +413,27 @@ footer {
   footer p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem; }
+=======
+  background-color: var(--colorFooterBackground);
+}
+footer section {
+  width: 25%;
+  display: flex;
+  justify-content: space-around;
+}
+footer section img {
+  width: 4dvh;
+  transition: 0.3s;
+  cursor: pointer;
+}
+footer section img:hover {
+  transform: scale(120%);
+}
+footer p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.7em;
+}
+>>>>>>> origin/tasha
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -426,27 +448,52 @@ body {
   align-items: center;
   justify-content: space-between; }
 
-.logo-nom, .mode-menu {
+.logo-nom,
+.mode-menu {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around; }
 
+<<<<<<< HEAD
 .logo, .nom, .mode, .menu {
   padding: 0 2vw; }
+=======
+.logo,
+.nom,
+.dark-light,
+.menu {
+  padding: 0 2vw;
+}
+>>>>>>> origin/tasha
 
 .nom {
   font-family: Righteous;
-  font-size: 0.5em;
+  font-size: 0.7em;
   letter-spacing: 0.07rem;
   color: var(--colorHeaderText);
   margin: 0; }
 
-.mode img, .menu img {
+.dark-light img,
+.menu img {
+  width: 4dvh;
   transition: 0.3s;
+<<<<<<< HEAD
   cursor: pointer; }
 .mode img:hover, .menu img:hover {
   transform: scale(120%); }
+=======
+  cursor: pointer;
+}
+.dark-light img:hover,
+.menu img:hover {
+  transform: scale(120%);
+}
+>>>>>>> origin/tasha
+
+.logo {
+  height: 8dvh;
+}
 
 main {
   width: 100%;
@@ -518,6 +565,7 @@ main {
 .list {
   overflow: hidden;
   overflow-y: scroll;
+<<<<<<< HEAD
   height: 50dvh; }
   .list .task {
     width: 95%;
@@ -555,6 +603,68 @@ main {
       padding: 2%; }
   .list .task:hover {
     border: solid 1px blue; }
+=======
+  height: 50dvh;
+}
+.list .task {
+  width: 95%;
+  height: 8%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.7rem;
+  color: var(--colorTaskText);
+  background-color: var(--colorTaskBackground);
+  border-radius: 0.6vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-left: 2.5%;
+  margin-top: 5px;
+  color: var(--colorHeaderText);
+  background-color: var(--colorHeader);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  cursor: grab;
+}
+.list .task .div1 {
+  width: 95%;
+  height: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.list .task .div1 img {
+  height: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.list .task .div1 img:hover {
+  transform: scale(120%);
+}
+.list .task .div2 {
+  padding: 2%;
+}
+.list .task:hover {
+  border: solid 1px var(--colorHeaderText);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 1vw;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: linear-gradient(var(--colorListHeaderBackground), var(--colorListBackground));
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--colorFooterBackground);
+  height: 1vw;
+}
+>>>>>>> origin/tasha
 
 #form {
   z-index: 10;

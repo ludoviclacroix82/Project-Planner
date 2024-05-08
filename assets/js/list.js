@@ -148,7 +148,7 @@ function createTask(parent,name,description,date,id) {
     //task delete
     const taskRemove=createDiv('img',taskDiv1,null,'svg')
     taskRemove.src='assets/images/icons/remove.svg'
-    taskRemove.alt='remove'
+    taskRemove.alt='remove';
     taskRemove.addEventListener('click', () => {
         if (confirm("Are you sure to remove this task?")) {
             taskContainer.remove();
