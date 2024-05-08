@@ -1,80 +1,45 @@
 import { swipe } from "./swipe.js";
 
-const listItems = document.querySelectorAll(".task");
-const lists = document.querySelectorAll(".list");
+/**
+ * Drag drop les task dans les zone todo - doing - done
+ */
+export function dragDrop() {
+    const listItems = document.querySelectorAll(".task");
+    const lists = document.querySelectorAll(".list");
 
-let draggedItem = null;
+    let draggedItem = null;
 
-listItems.forEach((listItem) => {
-    listItem.addEventListener("dragstart", (event) => {
+    // Fonction pour gérer le début du glissement ou du toucher
+    function DragStart(event) {
         console.log("drag start");
-        draggedItem = listItem;
-        setTimeout(() => {
-            event.target.classList.add("dragging");
-        }, 0);
-    });
+        draggedItem = event.target;
+        console.log(event.target);
+    }
 
-
-    listItem.addEventListener("dragend", (event) => {
+    // Fonction pour gérer la fin du glissement ou du toucher
+    function DragEnd(event) {
         console.log("drag end");
         draggedItem = null;
-        setTimeout(() => {
-            event.target.classList.remove("dragging");
-        }, 0);
-    });
-    // Événements tactiles
-    listItem.addEventListener("touchstart", (event) => {
-        console.log("drag start");
-        draggedItem = listItem;
-        console.log(draggedItem);
-        setTimeout(() => {
-            event.target.classList.add("dragging");
-        }, 0);
-        swipe(true);
+    }
+
+    // Fonction pour gérer le dépôt d'un élément glissé
+    function Drop(event) {
+        event.preventDefault();
+        if (draggedItem !== null && draggedItem.classList.contains("task") && event.target.classList.contains("list"))
+            event.target.append(draggedItem);
+    }
+
+    // événements pour les tasks
+    listItems.forEach((listItem) => {
+        listItem.addEventListener('dragstart',  DragStart);
+        listItem.addEventListener('dragend', DragEnd);
     });
 
-    listItem.addEventListener("touchend", (event) => {
-        console.log("drag end");
-        draggedItem = null;
-        setTimeout(() => {
-            event.target.classList.remove("dragging");
-        }, 0);
-        swipe(true);
+    // Ajouter les écouteurs d'événements pour les zone done-doing to do
+    lists.forEach((list) => {
+        list.addEventListener('dragenter', (event) => event.preventDefault());
+        list.addEventListener('dragover', (event) => event.preventDefault());
+        list.addEventListener('dragleave', (event) => event.preventDefault());
+        list.addEventListener('drop', Drop);
     });
-});
-
-lists.forEach((list) => {
-    list.addEventListener("dragenter", (event) => {
-        event.preventDefault();
-        list.classList.add("zonetasks");
-    });
-
-    list.addEventListener("dragover", (event) => {
-        event.preventDefault();
-    });
-
-    list.addEventListener("dragleave", (event) => {
-        list.classList.remove("zonetasks");
-    });
-
-    list.addEventListener("drop", (event) => {
-        list.appendChild(draggedItem);
-        list.classList.remove("zonetasks");
-    });
-    // Événements tactiles
-    list.addEventListener("touchstart", (event) => {
-        console.log("touch start");
-        event.preventDefault();
-        list.classList.add("zonetasks");
-    });
-    list.addEventListener("touchmove", (event) => {
-        console.log("touch move");
-        event.preventDefault();
-    });
-    list.addEventListener("touchend", (event) => {
-        console.log("touch end");
-        event.preventDefault();
-            list.appendChild(draggedItem);
-        list.classList.remove("zonetasks");
-    });
-});
+}

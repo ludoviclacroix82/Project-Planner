@@ -9,11 +9,18 @@ import {createList,form,closeForm,addForm} from "./list.js";
 const data = JSON.parse(localStorage.getItem("data") || "[]");
 if (data != null) {
   data.forEach((element) => {
-    const parent=document.querySelector('.'+element.state)
+    const parent=document.querySelector('#'+element.state)
     createList(parent, element.name, element.description, element.date);
   });
 }
 
+const index = JSON.parse(localStorage.getItem("index") || 0);
+if(index==0) {
+  localStorage.setItem('index',index)
+}
+
+//INIT SWIPE
+swipe()
 
 //INIT ADD TASK
 document.querySelector('#addTodo').addEventListener('click', () => {
@@ -33,17 +40,18 @@ document.querySelector('#addButton').addEventListener('click', () => {
 })
 
 //Darkmode Tasha's changes 
-let darkmode = false;
-const modeButton = document.querySelector("#mode");
-const mode = document.querySelector(".mode");
-const logo = document.getElementsByClassName("logo")[0];
-const svgs = Array.from(document.querySelectorAll(".svg"));
+let darkmodeChoice = localStorage.getItem('darkmode');
+if(darkmodeChoice==null) {
+  localStorage.setItem('darkmode',false)
+  lightmode()
+} else if(darkmodeChoice=='true') {
+  darkmode()
+} else {
+  lightmode()
+}
 
-document.addEventListener("DOMContentLoaded", () => {
-  svgs.forEach((svg) => {
-    svg.classList.add("svgLightMode");
-  });
-});
+
+const modeButton = document.querySelector("#mode");
 
 modeButton.addEventListener("click", () => {
 
@@ -68,9 +76,33 @@ modeButton.addEventListener("click", () => {
     logo.src = "assets/images/logo-dark.svg";
     mode.src = "assets/images/icons/sun.svg";
   }
-});
+})
 
-swipe();
+export function lightmode() {
+  const logo = document.getElementsByClassName("logo")[0];
+  const svgs = Array.from(document.querySelectorAll(".svg"));
+  localStorage.setItem('darkmode',false)
+  document.documentElement.setAttribute("data-theme", "light");
+    svgs.forEach((svg) => {
+    svg.classList.add("svgLightMode");
+    svg.classList.remove("svgDarkMode");
+
+  });
+  logo.src = "assets/images/logo-light.svg";//change logo
+}
+
+export function darkmode() {
+  const logo = document.getElementsByClassName("logo")[0];
+  const svgs = Array.from(document.querySelectorAll(".svg"));
+  localStorage.setItem('darkmode',true)
+  document.documentElement.setAttribute("data-theme", "dark");
+    svgs.forEach((svg) => {
+    svg.classList.add("svgDarkMode");//remove class to change color to light mode
+    svg.classList.remove("svgLightMode");
+  });
+  //tasha
+  logo.src = "assets/images/logo-light.svg";
+}
 
 
 // const data = [

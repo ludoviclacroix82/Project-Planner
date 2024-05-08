@@ -568,7 +568,6 @@ main section .done .header img, main section .doing .header img, main section .t
 main section .done .footer, main section .doing .footer, main section .todo .footer {
   display: flex;
   align-items: center;
-  cursor: pointer;
 }
 @media only screen and (min-width: 400px) {
   main section .done .footer, main section .doing .footer, main section .todo .footer {
@@ -576,14 +575,17 @@ main section .done .footer, main section .doing .footer, main section .todo .foo
     padding-left: 20px;
   }
 }
-main section .done .footer::before, main section .doing .footer::before, main section .todo .footer::before {
+main section .done .footer div, main section .doing .footer div, main section .todo .footer div {
+  cursor: pointer;
+}
+main section .done .footer div::before, main section .doing .footer div::before, main section .todo .footer div::before {
   content: "+";
   margin-right: 10px;
 }
-main section .done .footer::first-letter, main section .doing .footer::first-letter, main section .todo .footer::first-letter {
+main section .done .footer div::first-letter, main section .doing .footer div::first-letter, main section .todo .footer div::first-letter {
   text-transform: capitalize;
 }
-main section .done .footer:hover, main section .doing .footer:hover, main section .todo .footer:hover {
+main section .done .footer div:hover, main section .doing .footer div:hover, main section .todo .footer div:hover {
   color: var(--colorMainText);
 }
 .list {
@@ -600,7 +602,8 @@ main section .done .footer:hover, main section .doing .footer:hover, main sectio
   background-color: var(--colorTaskBackground);
   border-radius: 0.6vh;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding-left: 2%;
   padding-right: 2%;
@@ -611,13 +614,23 @@ main section .done .footer:hover, main section .doing .footer:hover, main sectio
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   cursor: grab;
 }
-.list .task img {
-  height: 60%;
+.list .task .div1 {
+  width: 95%;
+  height: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.list .task .div1 img {
+  height: 25px;
   cursor: pointer;
   transition: 0.3s;
 }
-.list .task img:hover {
+.list .task .div1 img:hover {
   transform: scale(120%);
+}
+.list .task .div2 {
+  padding: 2%;
 }
 .list .task:hover {
   border: solid 1px var(--colorHeaderText);
