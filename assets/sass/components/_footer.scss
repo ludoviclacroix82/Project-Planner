@@ -9,9 +9,16 @@ footer {
     background-color:var(--colorFooterBackground);
 
     section {
-        width:25%;
+        width:40%;
         display:flex;
         justify-content: space-around;
+
+        @include responsive(1024px) {
+            width:25%;
+        }
+        @include responsive(1440px) {
+            width:15%;
+        }
 
         img {
             width: 4dvh;
@@ -25,7 +32,7 @@ footer {
 
     p {
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 0.7em;
+        font-size: 0.8em;
     }
 }
 

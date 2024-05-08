@@ -2,6 +2,7 @@
 import { swipe } from "./swipe.js";
 import { sleep } from "./fnc.js";
 import { createList, form, closeForm, addForm } from "./list.js";
+import { sort } from "./sort.js";
 
 
 
@@ -21,6 +22,7 @@ if (index == 0) {
 
 //INIT SWIPE
 swipe()
+
 
 //INIT SORT
 sort()
@@ -121,3 +123,4 @@ export function darkmode() {
   logo.src = "assets/images/logo-dark.svg";
   mode.src = "assets/images/icons/sun.svg";
 }
+

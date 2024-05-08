@@ -34,7 +34,7 @@ export function addForm() {
     const name=escapeHtml(document.querySelector('#taskID').value)
     const description=escapeHtml(document.querySelector('#descriptionID').value )
     const date=document.querySelector('#deadlineID').value
-    const remaining='test'
+    const id=generateID(name)
 
     //erreurs
     if(name=='') {
@@ -45,7 +45,7 @@ export function addForm() {
         return error('empty date')
     }
 
-    const taskContainer=createTask(parent,name,description,date,remaining)
+    const taskContainer=createTask(parent,name,description,date,id)
 
     //update darkmode
     const darkmodeChoice=localStorage.getItem('darkmode')
@@ -56,7 +56,6 @@ export function addForm() {
     }
     
     //task id
-    const id=generateID(name)
     taskContainer.id=id
     let index=localStorage.getItem('index')
     localStorage.setItem('index',parseInt(index)+1)
@@ -150,11 +149,21 @@ function createTask(parent,name,description,date,id) {
     taskRemove.src='assets/images/icons/remove.svg'
     taskRemove.alt='remove';
     taskRemove.addEventListener('click', () => {
+        console.log(id)
         if (confirm("Are you sure to remove this task?")) {
             taskContainer.remove();
+            const data = JSON.parse(localStorage.getItem("data") || "[]");
+            for(let i=0; i<data.length; i++) {
+                if(data[i].taskID==id) {
+                    data.splice(i, 1);
+                    localStorage.setItem("data", JSON.stringify(data));
+                }
+            }
+
         }
     })
     dragDrop()
+
     return taskContainer
 }
 
