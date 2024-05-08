@@ -3,6 +3,8 @@ import {swipe} from "./swipe.js";
 import {sleep} from "./fnc.js";
 import {createList,form,closeForm,addForm} from "./list.js";
 
+
+
 //INIT DATA
 const data = JSON.parse(localStorage.getItem("data") || "[]");
 if (data != null) {
@@ -11,6 +13,7 @@ if (data != null) {
     createList(parent, element.name, element.description, element.date);
   });
 }
+
 
 //INIT ADD TASK
 document.querySelector('#addTodo').addEventListener('click', () => {
@@ -32,6 +35,7 @@ document.querySelector('#addButton').addEventListener('click', () => {
 //Darkmode Tasha's changes 
 let darkmode = false;
 const modeButton = document.querySelector("#mode");
+const mode = document.querySelector(".mode");
 const logo = document.getElementsByClassName("logo")[0];
 const svgs = Array.from(document.querySelectorAll(".svg"));
 
@@ -52,6 +56,7 @@ modeButton.addEventListener("click", () => {
     });
     //tasha
     logo.src = "assets/images/logo-light.svg";
+    mode.src = "assets/images/icons/moon.svg";
   } else {
     darkmode=true;
     document.documentElement.setAttribute("data-theme", "dark");
@@ -60,11 +65,13 @@ modeButton.addEventListener("click", () => {
       svg.classList.add("svgDarkMode");
 
     });
-    logo.src = "assets/images/logo-dark.svg";//change logo
+    logo.src = "assets/images/logo-dark.svg";
+    mode.src = "assets/images/icons/sun.svg";
   }
 });
 
 swipe();
+
 
 // const data = [
 //     {

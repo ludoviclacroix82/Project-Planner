@@ -45,7 +45,9 @@ function createTask(parent,name,description,date,remaining) {
     taskContainer.setAttribute('draggable',true)
 
     //task name
-    const taskName=createDiv('h3',taskContainer,name)
+    const taskName=createDiv('h3',taskContainer,name);
+    
+    
 
     // Task remaining
     const now = new Date();
@@ -59,12 +61,13 @@ function createTask(parent,name,description,date,remaining) {
         remainingText = 'Too late!'
     }
 
-    const taskRemaining=createDiv('p',taskContainer,remainingText)
+    const taskRemaining=createDiv('p',taskContainer,remainingText);
+    
 
     //task delete
     const taskRemove=createDiv('img',taskContainer,null,'svg')
     taskRemove.src='assets/images/icons/remove.svg'
-    taskRemove.alt='remove'
+    taskRemove.alt='remove';
     taskRemove.addEventListener('click', () => {
         if (confirm("Are you sure to remove this task?")) {
             taskContainer.remove();
