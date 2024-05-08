@@ -29,5 +29,5 @@ You can access the project on GitHub Pages [here](https://ludoviclacroix82.githu
 You can access the Figma on the project [here](https://www.figma.com/design/jYs1kcGV292y2q2agbHTQa/BeCode-Planner?node-id=0-1&t=wVLyPGfl2dWyIU73-0) realised by [NataliiaTasha](https://github.com/NataliiaTasha)
 
 ## Project Screenshot
-(resources/Desktop.png)(resources/Mobile-dark.png)
+![Desktop](resources/Desktop.png) ![Mobile](resources/Mobile-dark.png)
 
