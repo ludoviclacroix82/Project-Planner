@@ -1,0 +1,20 @@
+.sortMenu {
+    position:absolute;
+    top:0;
+    right:15%;
+    z-index: 10;
+    background-color: white;
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    padding:1%;
+    border-radius: 0.6vh;
+
+    .sortOption {
+        cursor:pointer;
+    }
+
+    .sortOption:hover {
+        color:var(--colorHeaderText);
+        background-color: var(--colorListBackground);
+    }
+}

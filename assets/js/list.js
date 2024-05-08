@@ -1,10 +1,10 @@
-import {createDiv, sleep} from "./fnc.js";
+import {createDiv, sleep, escapeHtml} from "./fnc.js";
 import {dragDrop} from "./dragdrop.js";
 import {darkmode, lightmode} from "./main.js";
 
 //CREATE LIST
-export function createList(parent,name,description,date) {
-    createTask(parent,name,description,date)
+export function createList(parent,name,description,date,id) {
+    createTask(parent,name,description,date,id)
 }
 
 //FORM
@@ -17,6 +17,9 @@ export async function form(state) {
     form.classList.add('fadeIn')
     main.classList.add('blurIn')
 
+    //errors
+    document.querySelector('#errorDisplay').innerHTML=''
+
     //button
     form.setAttribute('addTo',state)
 }
@@ -28,12 +31,21 @@ export function addForm() {
     
     //form values
     const parent=document.querySelector('#'+state)
-    const name=document.querySelector('#taskID').value 
-    const description=document.querySelector('#descriptionID').value 
+    const name=escapeHtml(document.querySelector('#taskID').value)
+    const description=escapeHtml(document.querySelector('#descriptionID').value )
     const date=document.querySelector('#deadlineID').value
-    const remaining='test'
+    const id=generateID(name)
 
-    const taskContainer=createTask(parent,name,description,date,remaining)
+    //erreurs
+    if(name=='') {
+        return error('empty name')
+    } else if(description=='') {
+        return error('empty description')
+    } else if(date=='') {
+        return error('empty date')
+    }
+
+    const taskContainer=createTask(parent,name,description,date,id)
 
     //update darkmode
     const darkmodeChoice=localStorage.getItem('darkmode')
@@ -44,7 +56,6 @@ export function addForm() {
     }
     
     //task id
-    const id=generateID(name)
     taskContainer.id=id
     let index=localStorage.getItem('index')
     localStorage.setItem('index',parseInt(index)+1)
@@ -63,10 +74,16 @@ export function addForm() {
     closeForm()
 }
 
+function error(type) {
+    const display=document.querySelector('#errorDisplay')
+    display.innerText=type;
+}
+
 //CREATE TASK
-function createTask(parent,name,description,date) {
+function createTask(parent,name,description,date,id) {
     const taskContainer=createDiv('div',parent,null,'task')
     taskContainer.setAttribute('draggable',true)
+    taskContainer.id=id
 
     const taskDiv1=createDiv('div',taskContainer,null,'div1')
 
@@ -79,13 +96,19 @@ function createTask(parent,name,description,date) {
     const timeDifference = taskDate.getTime() - now.getTime();
     const dayDifference = Math.ceil(timeDifference / (1000 * 3600 * 24));
     let remainingText = dayDifference+' days'
+    let color;
     if(dayDifference==1) {
         remainingText = dayDifference+' day'
+        color='orange'
     } else if (dayDifference<=0) {
         remainingText = 'Too late!'
+        color='red'
+    } else if(dayDifference<5) {
+        color='yellow'
     }
 
-    createDiv('p',taskDiv1,remainingText)
+    const remainingDiv=createDiv('p',taskDiv1,remainingText)
+    remainingDiv.style.color=color
 
     //task description
     const arrow=createDiv('img',taskDiv1,null,'svg')
@@ -113,17 +136,34 @@ function createTask(parent,name,description,date) {
             arrow.src='assets/images/icons/arrow-down.svg'
         }
     })
+    //update darkmode
+    const darkmodeChoice=localStorage.getItem('darkmode')
+    if(darkmodeChoice=='true') {
+        darkmode()
+      } else {
+        lightmode()
+    }
 
     //task delete
     const taskRemove=createDiv('img',taskDiv1,null,'svg')
     taskRemove.src='assets/images/icons/remove.svg'
     taskRemove.alt='remove';
     taskRemove.addEventListener('click', () => {
+        console.log(id)
         if (confirm("Are you sure to remove this task?")) {
             taskContainer.remove();
+            const data = JSON.parse(localStorage.getItem("data") || "[]");
+            for(let i=0; i<data.length; i++) {
+                if(data[i].taskID==id) {
+                    data.splice(i, 1);
+                    localStorage.setItem("data", JSON.stringify(data));
+                }
+            }
+
         }
     })
     dragDrop()
+
     return taskContainer
 }
 

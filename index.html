@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>New page</title>
+    <title>Boomer Planner</title>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,7 +42,7 @@
             <div class="todo">
                 <div class="header">
                     <h2>to do</h2>
-                    <img class="svg" src="assets/images/icons/cart menu.svg" alt="cart Menu">
+                    <img id="sortTodo" class="svg" src="assets/images/icons/sort-desc.svg" alt="cart Menu">
                 </div>
                 <div id="todo" class="list">
                 </div>
@@ -53,7 +53,7 @@
             <div class="doing">
                 <div class="header">
                     <h2>doing</h2>
-                    <img class="svg" src="assets/images/icons/cart menu.svg" alt="cart Menu">
+                    <img id="sortDoing" class="svg" src="assets/images/icons/sort-desc.svg" alt="cart Menu">
                 </div>
                 <div id="doing" class="list"></div>
                 <div class="footer" id="addDoing">
@@ -63,15 +63,21 @@
             <div class="done">
                 <div class="header">
                     <h2>done</h2>
-                    <img class="svg" src="assets/images/icons/cart menu.svg" alt="cart Menu">
+                    <img id="sortDone" class="svg" src="assets/images/icons/sort-desc.svg" alt="cart Menu">
                 </div>
                 <div id="done" class="list"></div>
                 <div class="footer" id="addDone">
                     <div>Add</div>
                 </div>
             </div>
+            
+            
         </section>
-
+            <div id="navPoints" class="points">
+                <div id="navPoint1" class="point"></div>
+                <div id="navPoint2" class="point"></div>
+                <div id="navPoint3" class="point"></div>
+            </div>
     </main>
 
     <div id="form">
@@ -94,6 +100,8 @@
                     <label for="deadline">Deadline:</label>
                     <input type="date" name="deadline" id="deadlineID">
                 </div>
+
+                <div id="errorDisplay"></div>
                 
                 <input id="addButton" type="button" value="Add">
             </div>
