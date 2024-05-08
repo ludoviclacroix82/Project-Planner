@@ -71,13 +71,7 @@ function createTask(parent,name,description,date) {
     const taskDiv1=createDiv('div',taskContainer,null,'div1')
 
     //task name
-<<<<<<< HEAD
-    const taskName=createDiv('h3',taskContainer,name);
-    
-    
-=======
     createDiv('h3',taskDiv1,name)
->>>>>>> origin/dev
 
     // Task remaining
     const now = new Date();
@@ -91,10 +85,6 @@ function createTask(parent,name,description,date) {
         remainingText = 'Too late!'
     }
 
-<<<<<<< HEAD
-    const taskRemaining=createDiv('p',taskContainer,remainingText);
-    
-=======
     createDiv('p',taskDiv1,remainingText)
 
     //task description
@@ -123,7 +113,6 @@ function createTask(parent,name,description,date) {
             arrow.src='assets/images/icons/arrow-down.svg'
         }
     })
->>>>>>> origin/dev
 
     //task delete
     const taskRemove=createDiv('img',taskDiv1,null,'svg')
