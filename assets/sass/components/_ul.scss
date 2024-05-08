@@ -4,8 +4,13 @@
     height:50dvh;
     .task {
         @include box(95%,8%);
-        border:solid 1px var(--colorHeaderText);
-        border-radius: 30px;
+        // border:solid 1px var(--colorHeaderText);
+        // border-radius: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.7rem;
+        color: var(--colorTaskText);
+        background-color: var(--colorTaskBackground);
+        border-radius: 0.6vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -15,6 +20,7 @@
         margin-left: 2.5%;
         margin-top: 5px;
         color:var(--colorHeaderText);
+        background-color: var(--colorHeader);
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
         cursor: grab;
 
