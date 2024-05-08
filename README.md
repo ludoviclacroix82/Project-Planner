@@ -30,3 +30,6 @@ The link to the instructions is available [here](https://github.com/becodeorg/CR
 
 ## Project Screenshot
 ![Desktop](resources/Desktop.png)
+
+### Issue with Drag & Drop on Mobile Devices
+We have identified an issue with the drag & drop functionality on mobile devices. Currently, this feature does not work properly on mobile devices, which may limit the user experience for mobile users.
