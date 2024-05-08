@@ -1,29 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 *, *::before, *::after {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 * {
-  margin: 0;
-}
+  margin: 0; }
 
 html {
-  height: 100%;
-}
+  height: 100%; }
 
 body {
   line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
+  -webkit-font-smoothing: antialiased; }
 
 img, picture, video, canvas, svg {
   display: block;
-  max-width: 100%;
-}
+  max-width: 100%; }
 
 input, button, textarea, select {
-  font: inherit;
-}
+  font: inherit; }
 
 p,
 h1,
@@ -32,12 +26,10 @@ h3,
 h4,
 h5,
 h6 {
-  overflow-wrap: break-word;
-}
+  overflow-wrap: break-word; }
 
 #root, #__next {
-  isolation: isolate;
-}
+  isolation: isolate; }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -47,9 +39,10 @@ h6 {
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-}
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
 
 /* Sections
    ========================================================================== */
@@ -57,15 +50,13 @@ html {
  * Remove the margin in all browsers.
  */
 body {
-  margin: 0;
-}
+  margin: 0; }
 
 /**
  * Render the `main` element consistently in IE.
  */
 main {
-  display: block;
-}
+  display: block; }
 
 /**
  * Correct the font size and margin on `h1` elements within `section` and
@@ -73,8 +64,7 @@ main {
  */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
-}
+  margin: 0.67em 0; }
 
 /* Grouping content
    ========================================================================== */
@@ -83,19 +73,22 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
-}
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
-}
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
 
 /* Text-level semantics
    ========================================================================== */
@@ -103,27 +96,26 @@ pre {
  * Remove the gray background on active links in IE 10.
  */
 a {
-  background-color: transparent;
-}
+  background-color: transparent; }
 
 /**
  * 1. Remove the bottom border in Chrome 57-
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-  border-bottom: none; /* 1 */
-  text-decoration: underline; /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; /* 2 */
-}
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
 
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
 b,
 strong {
-  font-weight: bolder;
-}
+  font-weight: bolder; }
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
@@ -132,16 +124,16 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
-}
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
 
 /**
  * Add the correct font size in all browsers.
  */
 small {
-  font-size: 80%;
-}
+  font-size: 80%; }
 
 /**
  * Prevent `sub` and `sup` elements from affecting the line height in
@@ -152,16 +144,13 @@ sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
 
 sub {
-  bottom: -0.25em;
-}
+  bottom: -0.25em; }
 
 sup {
-  top: -0.5em;
-}
+  top: -0.5em; }
 
 /* Embedded content
    ========================================================================== */
@@ -169,8 +158,7 @@ sup {
  * Remove the border on images inside links in IE 10.
  */
 img {
-  border-style: none;
-}
+  border-style: none; }
 
 /* Forms
    ========================================================================== */
@@ -183,57 +171,57 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
-}
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
 
 /**
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
  */
 button,
-input { /* 1 */
-  overflow: visible;
-}
+input {
+  /* 1 */
+  overflow: visible; }
 
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
  */
 button,
-select { /* 1 */
-  text-transform: none;
-}
+select {
+  /* 1 */
+  text-transform: none; }
 
 /**
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   border-style: none;
-  padding: 0;
-}
+  padding: 0; }
 
 /**
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
 
 /**
  * Correct the padding in Firefox.
  */
 fieldset {
-  padding: 0.35em 0.75em 0.625em;
-}
+  padding: 0.35em 0.75em 0.625em; }
 
 /**
  * 1. Correct the text wrapping in Edge and IE.
@@ -242,61 +230,64 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
-  display: table; /* 1 */
-  max-width: 100%; /* 1 */
-  padding: 0; /* 3 */
-  white-space: normal; /* 1 */
-}
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
 
 /**
  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
 progress {
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
 
 /**
  * Remove the default vertical scrollbar in IE 10+.
  */
 textarea {
-  overflow: auto;
-}
+  overflow: auto; }
 
 /**
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type=checkbox],
-[type=radio] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
-}
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
 
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
-  height: auto;
-}
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
 
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type=search]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
 
 /**
  * 1. Correct the inability to style clickable types in iOS and Safari.
  * 2. Change font properties to `inherit` in Safari.
  */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
-}
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
 
 /* Interactive
    ========================================================================== */
@@ -304,15 +295,13 @@ textarea {
  * Add the correct display in Edge, IE 10+, and Firefox.
  */
 details {
-  display: block;
-}
+  display: block; }
 
 /*
  * Add the correct display in all browsers.
  */
 summary {
-  display: list-item;
-}
+  display: list-item; }
 
 /* Misc
    ========================================================================== */
@@ -320,69 +309,51 @@ summary {
  * Add the correct display in IE 10+.
  */
 template {
-  display: none;
-}
+  display: none; }
 
 /**
  * Add the correct display in IE 10.
  */
 [hidden] {
-  display: none;
-}
+  display: none; }
 
 .blurIn {
-  animation: blurOut 0.3s linear forwards;
-}
+  animation: blurOut 0.3s linear forwards; }
 
 @keyframes blurOut {
   0% {
-    filter: blur(10px);
-  }
+    filter: blur(10px); }
   100% {
-    filter: blur(0);
-  }
-}
+    filter: blur(0); } }
 .blurIn {
-  animation: blurIn 0.3s linear forwards;
-}
+  animation: blurIn 0.3s linear forwards; }
 
 @keyframes blurIn {
   0% {
-    filter: blur(0);
-  }
+    filter: blur(0); }
   100% {
-    filter: blur(10px);
-  }
-}
+    filter: blur(10px); } }
 .fadeOut {
-  animation: fadeOut 0.3s linear forwards;
-}
+  animation: fadeOut 0.3s linear forwards; }
 
 @keyframes fadeOut {
   0% {
     opacity: 1;
-    filter: blur(0);
-  }
+    filter: blur(0); }
   100% {
     opacity: 0;
-    filter: blur(10px);
-  }
-}
+    filter: blur(10px); } }
 .fadeIn {
-  animation: fadeIn 0.3s linear forwards;
-}
+  animation: fadeIn 0.3s linear forwards; }
 
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    filter: blur(10px);
-  }
+    filter: blur(10px); }
   100% {
     opacity: 1;
-    filter: blur(0);
-  }
-}
-html[data-theme=light] {
+    filter: blur(0); } }
+html[data-theme="light"] {
   --colorHeaderBackground:#E0F4FF;
   --colorHeaderText:#456375;
   --colorMainBackground:linear-gradient(#C6EAFF, #2C9FDF);
@@ -392,10 +363,9 @@ html[data-theme=light] {
   --colorTaskBackground:#ECF1F4;
   --colorTaskText:#456375;
   --colorFooterBackground:#AACBDD;
-  --colorFooterText:#456375;
-}
+  --colorFooterText:#456375; }
 
-html[data-theme=dark] {
+html[data-theme="dark"] {
   --colorHeaderBackground:#456375;
   --colorHeaderText:#ffffff;
   --colorMainBackground:linear-gradient(#465B66, #000000);
@@ -405,23 +375,19 @@ html[data-theme=dark] {
   --colorTaskBackground:#456375;
   --colorTaskText:#ffffff;
   --colorFooterBackground:#456375;
-  --colorFooterText:#ffffff;
-}
+  --colorFooterText:#ffffff; }
 
 .svgLightMode {
-  filter: brightness(0) saturate(100%) invert(36%) sepia(22%) saturate(735%) hue-rotate(159deg) brightness(90%) contrast(82%);
-}
+  filter: brightness(0) saturate(100%) invert(36%) sepia(22%) saturate(735%) hue-rotate(159deg) brightness(90%) contrast(82%); }
 
 .svgDarkMode {
-  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(240deg) brightness(98%) contrast(105%);
-}
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(240deg) brightness(98%) contrast(105%); }
 
-.righteous-regular, #form h2, main section .done .header, main section .doing .header, main section .todo .header {
+.righteous-regular, main section .todo .header, main section .doing .header, main section .done .header, #form h2 {
   font-family: "Righteous", sans-serif;
   font-weight: 400;
   font-style: normal;
-  letter-spacing: 0.07rem;
-}
+  letter-spacing: 0.07rem; }
 
 footer {
   width: 100%;
@@ -432,30 +398,24 @@ footer {
   padding-left: 3%;
   padding-right: 3%;
   color: var(--colorFooterText);
-  background-color: var(--colorFooterBackground);
-}
-footer section {
-  width: 25%;
-  display: flex;
-  justify-content: space-around;
-}
-footer section img {
-  width: 20px;
-  transition: 0.3s;
-  cursor: pointer;
-}
-footer section img:hover {
-  transform: scale(120%);
-}
-footer p {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem;
-}
+  background-color: var(--colorFooterBackground); }
+  footer section {
+    width: 25%;
+    display: flex;
+    justify-content: space-around; }
+    footer section img {
+      width: 20px;
+      transition: 0.3s;
+      cursor: pointer; }
+    footer section img:hover {
+      transform: scale(120%); }
+  footer p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem; }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: 500;
-}
+  font-weight: 500; }
 
 .header-container {
   height: 10dvh;
@@ -464,166 +424,136 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-}
+  justify-content: space-between; }
 
 .logo-nom, .mode-menu {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
-}
+  justify-content: space-around; }
 
 .logo, .nom, .mode, .menu {
-  padding: 0 2vw;
-}
+  padding: 0 2vw; }
 
 .nom {
   font-family: Righteous;
   font-size: 0.5em;
   letter-spacing: 0.07rem;
   color: var(--colorHeaderText);
-  margin: 0;
-}
+  margin: 0; }
 
 .mode img, .menu img {
   transition: 0.3s;
-  cursor: pointer;
-}
+  cursor: pointer; }
 .mode img:hover, .menu img:hover {
-  transform: scale(120%);
-}
+  transform: scale(120%); }
 
 main {
   width: 100%;
   height: 80dvh;
-  background: var(--colorMainBackground);
-}
-main section {
-  width: 100%;
-  height: 100%;
-  padding: 0px 50px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 5%;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-@media only screen and (min-width: 400px) {
+  background: var(--colorMainBackground); }
   main section {
-    justify-content: flex-start;
-  }
-}
-main section .done, main section .doing, main section .todo {
-  font-weight: 400;
-  color: var(--colorTaskText);
-  background-color: var(--colorListBackground);
-  position: relative;
-  width: 325px;
-  height: 65dvh;
-  max-height: 80%;
-  border-radius: 10px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}
-main section .done .header, main section .doing .header, main section .todo .header {
-  width: 100%;
-  height: 8dvh;
-  background-color: var(--colorListHeaderBackground);
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  color: var(--colorMainText);
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-}
-main section .done .header h2, main section .doing .header h2, main section .todo .header h2 {
-  width: 50%;
-}
-@media only screen and (min-width: 400px) {
-  main section .done .header h2, main section .doing .header h2, main section .todo .header h2 {
-    font-size: 1.1rem;
-    padding-left: 20px;
-  }
-}
-main section .done .header h2::first-letter, main section .doing .header h2::first-letter, main section .todo .header h2::first-letter {
-  text-transform: capitalize;
-}
-main section .done .header img, main section .doing .header img, main section .todo .header img {
-  position: absolute;
-  left: 85%;
-}
-main section .done .footer, main section .doing .footer, main section .todo .footer {
-  display: flex;
-  align-items: center;
-}
-@media only screen and (min-width: 400px) {
-  main section .done .footer, main section .doing .footer, main section .todo .footer {
-    font-size: 1.1rem;
-    padding-left: 20px;
-  }
-}
-main section .done .footer div, main section .doing .footer div, main section .todo .footer div {
-  cursor: pointer;
-}
-main section .done .footer div::before, main section .doing .footer div::before, main section .todo .footer div::before {
-  content: "+";
-  margin-right: 10px;
-}
-main section .done .footer div::first-letter, main section .doing .footer div::first-letter, main section .todo .footer div::first-letter {
-  text-transform: capitalize;
-}
-main section .done .footer div:hover, main section .doing .footer div:hover, main section .todo .footer div:hover {
-  color: var(--colorMainText);
-}
+    width: 100%;
+    height: 100%;
+    padding: 0px 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; }
+    @media only screen and (min-width: 300px) {
+      main section {
+        justify-content: flex-start; } }
+    main section .todo, main section .doing, main section .done {
+      font-weight: 400;
+      color: var(--colorTaskText);
+      background-color: var(--colorListBackground);
+      position: relative;
+      width: 325px;
+      height: 65dvh;
+      max-height: 80%;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
+      main section .todo .header, main section .doing .header, main section .done .header {
+        width: 100%;
+        height: 8dvh;
+        background-color: var(--colorListHeaderBackground);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        color: var(--colorMainText);
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center; }
+        main section .todo .header h2, main section .doing .header h2, main section .done .header h2 {
+          width: 50%; }
+          @media only screen and (min-width: 300px) {
+            main section .todo .header h2, main section .doing .header h2, main section .done .header h2 {
+              font-size: 1.1rem;
+              padding-left: 20px; } }
+          main section .todo .header h2::first-letter, main section .doing .header h2::first-letter, main section .done .header h2::first-letter {
+            text-transform: capitalize; }
+        main section .todo .header img, main section .doing .header img, main section .done .header img {
+          position: absolute;
+          left: 85%; }
+      main section .todo .footer, main section .doing .footer, main section .done .footer {
+        display: flex;
+        align-items: center; }
+        @media only screen and (min-width: 300px) {
+          main section .todo .footer, main section .doing .footer, main section .done .footer {
+            font-size: 1.1rem;
+            padding-left: 20px; } }
+        main section .todo .footer div, main section .doing .footer div, main section .done .footer div {
+          cursor: pointer; }
+          main section .todo .footer div::before, main section .doing .footer div::before, main section .done .footer div::before {
+            content: '+';
+            margin-right: 10px; }
+          main section .todo .footer div::first-letter, main section .doing .footer div::first-letter, main section .done .footer div::first-letter {
+            text-transform: capitalize; }
+          main section .todo .footer div:hover, main section .doing .footer div:hover, main section .done .footer div:hover {
+            color: var(--colorMainText); }
+
 .list {
   overflow: hidden;
   overflow-y: scroll;
-  height: 50dvh;
-}
-.list .task {
-  width: 95%;
-  height: 8%;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.7rem;
-  color: var(--colorTaskText);
-  background-color: var(--colorTaskBackground);
-  border-radius: 0.6vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-left: 2%;
-  padding-right: 2%;
-  margin-left: 2.5%;
-  margin-top: 5px;
-  color: var(--colorHeaderText);
-  background-color: var(--colorHeader);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  cursor: grab;
-}
-.list .task .div1 {
-  width: 95%;
-  height: 95%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.list .task .div1 img {
-  height: 25px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.list .task .div1 img:hover {
-  transform: scale(120%);
-}
-.list .task .div2 {
-  padding: 2%;
-}
-.list .task:hover {
-  border: solid 1px blue;
-}
+  height: 50dvh; }
+  .list .task {
+    width: 95%;
+    height: 8%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7rem;
+    color: var(--colorTaskText);
+    background-color: var(--colorTaskBackground);
+    border-radius: 0.6vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-left: 2.5%;
+    margin-top: 5px;
+    color: var(--colorHeaderText);
+    background-color: var(--colorHeader);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    cursor: grab; }
+    .list .task .div1 {
+      width: 95%;
+      height: 95%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .list .task .div1 img {
+        height: 25px;
+        cursor: pointer;
+        transition: 0.3s; }
+      .list .task .div1 img:hover {
+        transform: scale(120%); }
+    .list .task .div2 {
+      padding: 2%; }
+  .list .task:hover {
+    border: solid 1px blue; }
 
 #form {
   z-index: 10;
@@ -641,46 +571,40 @@ main section .done .footer div:hover, main section .doing .footer div:hover, mai
   padding: 0;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   color: var(--colorTaskText);
-  background-color: var(--colorListBackground);
-}
-#form #formContainer {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-#form h2 {
-  width: 100%;
-  height: 10%;
-  background-color: var(--colorListHeaderBackground);
-  color: var(--colorHeaderText);
-  text-align: center;
-}
-#form #closeForm {
-  height: 5%;
-  position: absolute;
-  top: 2%;
-  right: 2%;
-  cursor: pointer;
-  transition: 0.3s;
-}
-#form #closeForm:hover {
-  transform: scale(120%);
-}
-#form #formInputs {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
-#form input {
-  color: var(--colorTaskText);
-  background-color: var(--colorListBackground);
-  border-radius: 0.6vh;
-}
+  background-color: var(--colorListBackground); }
+  #form #formContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column; }
+  #form h2 {
+    width: 100%;
+    height: 10%;
+    background-color: var(--colorListHeaderBackground);
+    color: var(--colorHeaderText);
+    text-align: center; }
+  #form #closeForm {
+    height: 5%;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    cursor: pointer;
+    transition: 0.3s; }
+  #form #closeForm:hover {
+    transform: scale(120%); }
+  #form #formInputs {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; }
+  #form input {
+    color: var(--colorTaskText);
+    background-color: var(--colorListBackground);
+    border-radius: 0.6vh; }
 
 body {
-  overflow: hidden;
-}/*# sourceMappingURL=style.css.map */
+  overflow: hidden; }
+
+/*# sourceMappingURL=style.css.map */
