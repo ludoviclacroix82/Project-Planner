@@ -97,13 +97,19 @@ function createTask(parent,name,description,date,id) {
     const timeDifference = taskDate.getTime() - now.getTime();
     const dayDifference = Math.ceil(timeDifference / (1000 * 3600 * 24));
     let remainingText = dayDifference+' days'
+    let color;
     if(dayDifference==1) {
         remainingText = dayDifference+' day'
+        color='orange'
     } else if (dayDifference<=0) {
         remainingText = 'Too late!'
+        color='red'
+    } else if(dayDifference<5) {
+        color='yellow'
     }
 
-    createDiv('p',taskDiv1,remainingText)
+    const remainingDiv=createDiv('p',taskDiv1,remainingText)
+    remainingDiv.style.color=color
 
     //task description
     const arrow=createDiv('img',taskDiv1,null,'svg')
