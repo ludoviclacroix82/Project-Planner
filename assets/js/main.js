@@ -1,6 +1,6 @@
 
 import {swipe} from "./swipe.js";
-import {sleep} from "./fnc.js";
+import {sort} from "./sort.js";
 import {createList,form,closeForm,addForm} from "./list.js";
 
 //INIT DATA
@@ -8,7 +8,7 @@ const data = JSON.parse(localStorage.getItem("data") || "[]");
 if (data != null) {
   data.forEach((element) => {
     const parent=document.querySelector('#'+element.state)
-    createList(parent, element.name, element.description, element.date);
+    createList(parent, element.name, element.description, element.date, element.taskID);
   });
 }
 
@@ -19,6 +19,9 @@ if(index==0) {
 
 //INIT SWIPE
 swipe()
+
+//INIT SORT
+sort()
 
 //INIT ADD TASK
 document.querySelector('#addTodo').addEventListener('click', () => {
@@ -85,19 +88,3 @@ export function darkmode() {
   //tasha
   logo.src = "assets/images/logo-light.svg";
 }
-
-// const data = [
-//     {
-//         state:'todo',
-//         name:'',
-//         description:'',
-//         date:''
-//     },
-//     {
-//         state:'doing',
-//         name:'',
-//         description:'',
-//         date:''
-//     },
-// ]
-
