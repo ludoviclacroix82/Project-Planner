@@ -31,22 +31,16 @@ export function dragDrop() {
 
     // événements pour les tasks
     listItems.forEach((listItem) => {
-        listItem.addEventListener("dragstart",  DragStart);
-        listItem.addEventListener("dragend", DragEnd);
-
-        
+        listItem.addEventListener('dragstart',  DragStart);
+        listItem.addEventListener('dragend', DragEnd);
+        listItem.addEventListener('touchmove',DragStartMobile)      
     });
 
     // Ajouter les écouteurs d'événements pour les zone done-doing to do
     lists.forEach((list) => {
-        list.addEventListener("dragenter", (event) => event.preventDefault());
-        list.addEventListener("dragover", (event) => event.preventDefault());
-        list.addEventListener("dragleave", (event) => event.preventDefault());
-        list.addEventListener("drop", Drop);
-
-        //événements tactiles 
-        //list.addEventListener("touchstart",(event) => event.preventDefault());
-        //list.addEventListener("touchmove", (event) =>event.preventDefault());
-        //list.addEventListener("touchend", DropMobile);
+        list.addEventListener('dragenter', (event) => event.preventDefault());
+        list.addEventListener('dragover', (event) => event.preventDefault());
+        list.addEventListener('dragleave', (event) => event.preventDefault());
+        list.addEventListener('drop', Drop);
     });
 }
