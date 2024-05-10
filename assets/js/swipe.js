@@ -48,7 +48,7 @@ export function swipe(reverse) {
  * @param {NodeList} nav - Liste des points de navigation.
  */
 function navPoint(offsetWidth, newOffset, nav) {
-    // taille du conainer(list)
+    // taille du conainer (planner)
     const containerWidth = offsetWidth;
     // Calcul de l'index du conteneur actuel basé sur la position de défilement
     const containerIndex = Math.round(newOffset / containerWidth);
